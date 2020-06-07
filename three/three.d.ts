@@ -1,4 +1,4 @@
-declare module THREE {
+declare namespace THREE {
 
     export class WebGLRenderTargetCube extends WebGLRenderTarget {
 
@@ -24,7 +24,7 @@ declare module THREE {
         texture: Texture;
         depthBuffer: boolean;
         stencilBuffer: boolean;
-        depthTexture: Texture | null;
+        depthTexture: Texture;
 
         ["constructor"]: typeof WebGLRenderTarget;
         isWebGLRenderTarget: true;
@@ -66,18 +66,18 @@ declare module THREE {
         maxMorphTargets: number;
         maxMorphNormals: number;
 
-        capabilities: WebGLCapabilities;
-        extensions: WebGLExtensions;
-        properties: WebGLProperties;
-        renderLists: WebGLRenderLists;
-        state: WebGLState;
-        info: WebGLInfo;
+        capabilities: __internal.WebGLCapabilities;
+        extensions: __internal.WebGLExtensions;
+        properties: __internal.WebGLProperties;
+        renderLists: __internal.WebGLRenderLists;
+        state: __internal.WebGLState;
+        info: __internal.WebGLInfo;
 
-        vr: WebXRManager | WebXRManager;
+        vr: __internal.WebXRManager | __internal.WebVRManager;
 
-        shadowMap: WebGLShadowMap;
+        shadowMap: __internal.WebGLShadowMap;
 
-        getContext();
+        getContext(): WebGL2RenderingContext | WebGLRenderingContext;
         getContextAttributes();
         forceContextLoss(): void;
         forceContextRestore(): void;
@@ -102,7 +102,7 @@ declare module THREE {
         clearTarget(renderTarget: any, color: boolean, depth: boolean, stencil: boolean): void;
         dispose(): void;
 
-        renderBufferImmediate(object: any, program: any): void;
+        renderBufferImmediate(object: any, program: number): void;
         renderBufferDirect(camera: Camera, fog: any, geometry: any, material: Material, object: any, group: any): void;
 
         compile(scene: Scene, camera: Camera): void;
@@ -853,8 +853,8 @@ declare module THREE {
         parseGeometries(json: { }, shapes: Shape): Geometry;
         parseMaterials(json: { }, textures: Texture): Material;
         parseAnimations(json: Array<{ }>): Array<AnimationClip>;
-        parseImages(json: { }, onLoad: (image: Image) => any): Image;
-        parseTextures(json: { }, images: Array<Image>): Texture;
+        parseImages(json: { }, onLoad: (image: __internal.Image) => any): __internal.Image;
+        parseTextures(json: { }, images: Array<__internal.Image>): Texture;
         parseObject(data: any, geometries: Geometry, material: Material): Object3D;
 
     }
@@ -926,7 +926,7 @@ declare module THREE {
         manager: LoadingManager;
         crossOrigin: string;
         path: string;
-        load: __internal.Loader.loader<Image>;
+        load: __internal.Loader.loader<HTMLElement>;
         setCrossOrigin(value: string): ImageLoader;
         setPath(value: string): ImageLoader;
 
@@ -989,7 +989,7 @@ declare module THREE {
             handlers: Array<RegExp | any>;
 
             add(regex: any, loader: any): void;
-            get(file: string): any | null;
+            get(file: string): any;
 
         }
 
@@ -1447,7 +1447,7 @@ declare module THREE {
         constructor(binding: PropertyBinding, typeName: string, valueSize: number);
         binding: PropertyBinding;
         valueSize: number;
-        buffer: BufferType;
+        buffer: Float64Array;
         _mixBufferRegion: __internal.PropertyMixer.mixer;
         cumulativeWeight: number;
         useCount: number;
@@ -1472,8 +1472,8 @@ declare module THREE {
         node: any;
         rootNode: any;
 
-        static Composite: typeof Composite;
-        static create(root: any, path: string, parsedPath: string): PropertyBinding | Composite;
+        static Composite: typeof __internal.Composite;
+        static create(root: any, path: string, parsedPath: string): PropertyBinding | __internal.Composite;
         static sanitizeNodeName(name: string): string;
         static parseTrackName(trackName: string): __internal.PropertyBinding.TrackName;
         static findNode(root: any, nodeName: string): any;
@@ -1718,7 +1718,7 @@ declare module THREE {
         setFromPoints(points: Array<number>):  BufferGeometry;
         updateFromObject(object: any): BufferGeometry;
         fromGeometry(geometry: Geometry): BufferGeometry;
-        fromDirectGeometry(geometry: DirectGeometry): BufferGeometry;
+        fromDirectGeometry(geometry: __internal.DirectGeometry): BufferGeometry;
         computeBoundingBox(): void;
         computeBoundingSphere(): void;
         computeFaceNormals(): void;
@@ -3131,18 +3131,12 @@ declare module THREE {
         triangulateShape(contour: Array<Vector2>, holes: Array<Vector2>): any;
 
     }
-    
-    export function WebGLUtils(gl: WebGLRenderingContext, extensions: WebGLExtensions, capabilities: WebGLCapabilities): {
 
-        convert(p: number): number
+    export var WebGLUtils: {
 
-    }
+        new (gl: WebGL2RenderingContext | WebGLRenderingContext, extensions: __internal.WebGLExtensions, capabilities: __internal.WebGLCapabilities): __internal.WebGLUtils,
 
-    export class WebGLUtils {
-
-        constructor(gl: WebGLRenderingContext, extensions: WebGLExtensions, capabilities: WebGLCapabilities);
-
-        convert(p: number):  number;
+        (gl: WebGL2RenderingContext | WebGLRenderingContext, extensions: __internal.WebGLExtensions, capabilities: __internal.WebGLCapabilities): __internal.WebGLUtils
 
     }
 
@@ -4954,91 +4948,7 @@ declare module THREE {
 
     export var __esModule: true;
 
-    class WebXRManager {
-
-        constructor(renderer: WebGLRenderer);
-
-    }
-
-    class WebVRManager {
-
-        constructor(renderer: WebGLRenderer);
-
-    }
-
-    class WebGLShadowMap {
-
-        constructor(_renderer: WebGLRenderer, _objects: WebGLObjects, maxTextureSize: any);
-
-    }
-
-    class WebGLObjects {
-
-        constructor(geometries: WebGLGeometries, info: WebGLInfo);
-
-    }
-
-    class WebGLGeometries {
-
-        constructor(gl: any, attributes: WebGLAttributes);
-
-    }
-
-    class WebGLAttributes {
-
-        constructor(gl: any);
-
-    }
-
-    class WebGLInfo {
-
-        constructor(gl: any);
-
-    }
-
-    class WebGLCapabilities {
-
-        constructor(gl: any, extensions: WebGLExtensions, parameters: __internal.WebGLRenderer.parameters);
-
-    }
-
-    class WebGLExtensions {
-
-        constructor(gl: any);
-
-        get(name: any);
-
-    }
-
-    class WebGLProperties {
-
-        get(object: any);
-
-    }
-
-    class WebGLRenderLists { }
-
-    class WebGLState {
-
-        constructor(gl: any, extensions: WebGLExtensions, utils: WebGLUtils, capabilities: WebGLCapabilities);
-
-    }
-
-    class WebGLTextures {
-
-        constructor(_gl: any, extensions: WebGLExtensions, state: WebGLState, properties: WebGLProperties, capabilities: WebGLCapabilities, utils: WebGLUtils, info: WebGLInfo);
-
-    }
-
-    class Image { }
-
-    class BufferType { }
-
-    class Composite { }
-
-    class DirectGeometry { }
-
-    export namespace __internal {
+    namespace __internal {
 
         export namespace WebGLRenderTarget {
 
@@ -5379,6 +5289,272 @@ declare module THREE {
         export namespace BufferAttribute {
 
             export type array =  Float64Array | Float32Array | Uint32Array | Int32Array | Uint16Array | Int16Array | Uint8ClampedArray | Uint8Array | Int8Array;
+
+        }
+
+        export class WebXRManager {
+
+            enabled: boolean;
+
+            getController(id: number): Group;
+            getDevice(): any;
+            setDevice(value: any): void;
+            setSession(value: any, options: WebXRManager.sessionOptions): void;
+            updateCamera(camera: Camera, parent: Object3D): void;
+            getCamera(camera: Camera): Camera;
+            isPresenting(): boolean;
+            setAnimationLoop(callback: Function): void;
+            dispose(): void;
+            getStandingMatrix(): Matrix4;
+            submitFrame(): void;
+
+        }
+
+        export namespace WebXRManager {
+
+            export interface sessionOptions {
+
+                frameOfReferenceType: any
+
+            }
+
+        }
+
+        export class WebVRManager {
+
+            enabled: boolean;
+            userHeight: number;
+
+            getController(id: number): Group;
+            getDevice(): any;
+            setDevice(value: any): void;
+            setPoseTarget(object: any): void;
+            getCamera(camera: Camera): Camera;
+            getStandingMatrix(): Matrix4;
+            isPresenting(): boolean;
+            setAnimationLoop(callback: Function): void;
+            submitFrame(): void;
+            dispose(): void;
+
+        }
+
+        export class WebGLShadowMap {
+
+            enabled: boolean;
+            autoUpdate: boolean;
+            needsUpdate: boolean;
+            type: string;
+            render(lights: Array<Light>, scene: Scene, camera: Camera): void;
+
+        }
+
+        export interface WebGLInfo {
+
+            memory: {
+
+                geometries: number,
+                textures: number
+
+            },
+            render: {
+
+                frame: number,
+                calls: number,
+                triangles: number,
+                points: number,
+                lines: number
+
+            },
+            programs: any,
+            autoReset: boolean,
+
+            reset(): void,
+            update(count: number, mode: number, instanceCount: number): void;
+
+        }
+
+        export interface WebGLCapabilities {
+
+            isWebGL2: boolean,
+
+            getMaxAnisotropy(): number,
+            getMaxPrecision(precision: "highp" | "mediump" | "lowp"): "highp" | "mediump" | "lowp",
+
+            precision: "highp" | "mediump" | "lowp",
+            logarithmicDepthBuffer: boolean,
+            maxTextures: number,
+            maxVertexTextures: number,
+            maxTextureSize: number,
+            maxCubemapSize: number,
+            maxAttributes: number,
+            maxVertexUniforms: number, 
+            maxVaryings: number,
+            maxFragmentUniforms: number,
+            vertexTextures: boolean,
+            floatFragmentTextures: boolean,
+            floatVertexTextures: boolean
+
+        }
+
+        export interface WebGLExtensions {
+
+            get(name: string): EXT_texture_filter_anisotropic | EXT_frag_depth | EXT_shader_texture_lod | EXT_sRGB | OES_vertex_array_object | WEBGL_color_buffer_float | WEBGL_compressed_texture_astc | WEBGL_compressed_texture_s3tc_srgb | WEBGL_debug_shaders | WEBGL_draw_buffers | WEBGL_lose_context | WEBGL_depth_texture | WEBGL_debug_renderer_info | WEBGL_compressed_texture_s3tc | OES_texture_half_float_linear | OES_texture_half_float | OES_texture_float_linear | OES_texture_float | OES_standard_derivatives | OES_element_index_uint | ANGLE_instanced_arrays
+
+        }
+
+        export interface WebGLProperties {
+
+            get(object: object): any,
+            remove(object: object): void,
+            update(object: object, key: string | number | symbol, value: any): void,
+            dispose(): void,
+
+        }
+
+        export interface WebGLRenderLists {
+
+            get(scene: Scene, camera: Camera): { [hash: string]: WebGLRenderList },
+            dispose(): void
+
+        }
+
+        export interface WebGLState {
+
+            buffers: {
+
+                color: {
+
+                    setMask(colorMask: boolean): void,
+                    setLocked(lock: boolean): void,
+                    setClear(r: number, g: number, b: number, a: number, premultipliedAlpha: boolean): void,
+                    reset(): void
+
+                },
+                depth: {
+
+                    setTest(depthTest: boolean): void,
+                    setMask(depthMask: boolean): void,
+                    setFunc(depthFunc: number): void,
+                    setLocked(lock: boolean): void,
+                    setClear(depth: number): void,
+                    reset(): void
+
+                },
+                stencil: {
+
+                    setTest(stencilTest: boolean): void,
+                    setMask(stencilMask: boolean): void,
+                    setFunc(stencilFunc: number, stencilRef: number, stencilMask: number): void,
+                    setOp(stencilFail: number, stencilZFail: number, stencilZPass: number): void,
+                    setLocked(lock: boolean): void,
+                    setClear(stencil: number): void,
+                    reset(): void
+
+                }
+
+            },
+
+            initAttributes(): void,
+            enableAttribute(attribute: string): void,
+            enableAttributeAndDivisor(attribute: string, meshPerAttribute: number): void,
+            disableUnusedAttributes(): void,
+            enable(id: number): void,
+            disable(id: number): void,
+            getCompressedTextureFormats(): Array<number>,
+            useProgram(program: number): boolean,
+            setBlending(blending: number, blendEquation: number, blendSrc: number, blendDst: number, blendEquationAlpha: number, blendSrcAlpha: number, blendDstAlpha: number, premultiplidAlpha: boolean): void,
+            setMaterial(material: Material, frontFaceCW: boolean): void,
+            setFlipSided(flipSided: boolean): void,
+            setCullFace(cullFace: number): void,
+            setLineWidth(width: number): void,
+            setPolygonOffset(polygonOffset: boolean, factor: number, units: number): void,
+            setScissorTest(scissorTest: boolean): void,
+            activeTexture(webglSlot: number): void,
+            bindTexture(webglType: number, webglTexture: WebGLTexture): void,
+            compressedTexImage2D(...arguments: Array<number>): void,
+            texImage2D(...arguments: Array<number>): void,
+            scissor(scissor: Vector4): void,
+            viewport(viewport: Vector4): void,
+            reset(): void
+
+        }
+
+        export interface Image { }
+
+        export class Composite {
+
+            _targetGroup: any,
+            _bindings: Array<PropertyBinding>,
+
+            getValue(array: Array<any>, offset: number): void,
+            setValue(array: Array<any>, offset: number): void,
+            bind(): void,
+            unbind(): void
+
+        }
+
+        export interface DirectGeometry {
+
+            vertices: Array<Vector3>,
+            normals: Array<Vector3>,
+            colors: Array<Color>,
+            uvs: Array<Vector2>,
+            uvs2: Array<Vector2>,
+            groups: Array<any>,
+            morphTargets: object,
+            skinWeights: Array<number>,
+            skinIndices: Array<number>,
+            boundingBox: Box3,
+            boundingSphere: Sphere,
+            verticesNeedUpdate: boolean,
+            normalsNeedUpdate: boolean,
+            colorsNeedUpdate: boolean,
+            uvsNeedUpdate: boolean,
+            groupsNeedUpdate: boolean,
+
+            computeGroups(geometry: Geometry): void,
+            fromGeometry(geometry: Geometry): DirectGeometry
+
+        }
+
+        export interface WebGLUtils {
+
+            convert(p: number): number
+
+        }
+
+        export interface WebGLObjects {
+
+            update(object: Object3D): BufferGeometry,
+            dispose(): void
+
+        }
+
+        export interface WebGLRenderList {
+
+            opaque: Array<WebGLRenderList.Item>,
+            transparent: Array<WebGLRenderList.Item>,
+
+            init(): void,
+            push(object: Object3D, geometry: Geometry, material: Material, z: number, group: Group): void,
+            sort(): void
+
+        }
+
+        namespace WebGLRenderList {
+
+            export interface Item {
+
+                id: number,
+                object: Object3D,
+                geometry: Geometry,
+                material: Material,
+                program: number,
+                renderOrder: number,
+                z: number,
+                group: Group
+
+            }
 
         }
 
