@@ -3,3 +3,4 @@
 0.1.3 #3 2020 Jun 5: New defination of DeviceOrientationControls.js  
 0.1.6 #4 2020 Jun 6: Update defination and README  
 0.1.7 #5 2020 Jun 7: Update README.md
+0.1.8 #6 2020 Jun 7: Update README.md

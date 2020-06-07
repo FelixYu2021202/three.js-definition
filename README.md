@@ -6,7 +6,7 @@ This is an extension for learning-threejs-third, you can use the defination scri
 If you want to use this extension, write the code below in the first line of your javascript:  
 `///<reference path="file root/three.js-defination/lib root/lib name.d.ts"/>`  
 tip: "file root", "lib root", and "lib name" is the real roots and names, *not* the real thing! ***Don't say if you really write "file root/three.js-defination/lib root/lib name.d.ts"!***  
-warning: Every object "__internal" is not in the real object, it's for *definings and typings ***only**.  
+warning: Every object "__internal" is not in the real object, it's for definings and typings ***only***.  
 But when you write it in your javascript, you'll notice that it is *not* original comment, the words "reference", "path", and the string is highlighted! Do *not* worry because it's only the "VSCode 'defination' keyword", it won't have *any* effect in browsers.
 
 So, if you more like Typescript, you can even use it!
