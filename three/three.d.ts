@@ -1,4 +1,4 @@
-declare namespace THREE {
+declare module THREE {
 
     export class WebGLRenderTargetCube extends WebGLRenderTarget {
 
@@ -4948,9 +4948,9 @@ declare namespace THREE {
 
     export var __esModule: true;
 
-    namespace __internal {
+    module __internal {
 
-        export namespace WebGLRenderTarget {
+        export module WebGLRenderTarget {
 
             export interface options {
 
@@ -4963,7 +4963,7 @@ declare namespace THREE {
 
         }
 
-        export namespace EventDispatcher {
+        export module EventDispatcher {
 
             export interface event {
 
@@ -4973,7 +4973,7 @@ declare namespace THREE {
 
         }
 
-        export namespace WebGLRenderer {
+        export module WebGLRenderer {
 
             export interface parameters {
 
@@ -4998,7 +4998,7 @@ declare namespace THREE {
 
         }
 
-        export namespace Shader {
+        export module Shader {
 
             export interface shader {
 
@@ -5010,7 +5010,7 @@ declare namespace THREE {
 
         }
 
-        export namespace UniformsLib {
+        export module UniformsLib {
 
             export interface light {
 
@@ -5024,7 +5024,7 @@ declare namespace THREE {
 
         }
 
-        export namespace JSONLoader {
+        export module JSONLoader {
 
             export interface parse {
 
@@ -5035,7 +5035,7 @@ declare namespace THREE {
 
         }
 
-        export namespace Loader {
+        export module Loader {
 
             type _onLoad<T> =  (data: T) => any;
             type _onProgress =  (url: string, itemsLoaded: number, itemsTotal: number) => any;
@@ -5044,12 +5044,12 @@ declare namespace THREE {
 
         }
 
-        export namespace PropertyMixer {
+        export module PropertyMixer {
 
             export type mixer = (buffer: Array<any>, dstOffset: number, srcOffset: number, t: number) => void;
         }
 
-        export namespace PropertyBinding {
+        export module PropertyBinding {
 
             export interface TrackName {
 
@@ -5066,14 +5066,14 @@ declare namespace THREE {
 
         }
 
-        export namespace AnimationObjectGroup {
+        export module AnimationObjectGroup {
 
             export type IArgument = Array<{ uuid: string }>
             export interface I_Indices { [uuid: string]: number }
 
         }
 
-        export namespace AnimationMixer {
+        export module AnimationMixer {
 
             export interface stats {
 
@@ -5084,25 +5084,25 @@ declare namespace THREE {
 
         }
 
-        export namespace Object3D {
+        export module Object3D {
 
             export type traverseFn = (object: Object3D) => any;
 
         }
 
-        export namespace Layers {
+        export module Layers {
 
             export type layerFn = (channel: number) => number;
 
         }
 
-        export namespace Euler {
+        export module Euler {
 
             export type order = 'XYZ' | 'YZX' | 'ZXY' | 'XZY' | 'YXZ' | 'ZYX';
 
         }
 
-        export namespace Color {
+        export module Color {
 
             export interface hslObj {
 
@@ -5114,7 +5114,7 @@ declare namespace THREE {
 
         }
 
-        export namespace Shape {
+        export module Shape {
 
             export interface extract {
 
@@ -5125,7 +5125,7 @@ declare namespace THREE {
 
         }
 
-        export namespace Curve {
+        export module Curve {
 
             export interface frenetFrames {
 
@@ -5137,7 +5137,7 @@ declare namespace THREE {
 
         }
 
-        export namespace Parametric {
+        export module Parametric {
 
             export interface parameters {
 
@@ -5149,7 +5149,7 @@ declare namespace THREE {
 
         }
 
-        export namespace Hedron {
+        export module Hedron {
 
             export interface parameters {
 
@@ -5167,7 +5167,7 @@ declare namespace THREE {
 
         }
 
-        export namespace Text {
+        export module Text {
 
             export interface parameters extends ExtrudeShape.options {
 
@@ -5179,7 +5179,7 @@ declare namespace THREE {
 
         }
 
-        export namespace ExtrudeShape {
+        export module ExtrudeShape {
 
             export interface options {
 
@@ -5208,7 +5208,7 @@ declare namespace THREE {
 
         }
 
-        export namespace Material {
+        export module Material {
 
             export interface value {
 
@@ -5267,7 +5267,7 @@ declare namespace THREE {
 
         }
 
-        export namespace Shader {
+        export module Shader {
 
             export interface MaterialParameter {
 
@@ -5286,7 +5286,7 @@ declare namespace THREE {
 
         }
 
-        export namespace BufferAttribute {
+        export module BufferAttribute {
 
             export type array =  Float64Array | Float32Array | Uint32Array | Int32Array | Uint16Array | Int16Array | Uint8ClampedArray | Uint8Array | Int8Array;
 
@@ -5310,7 +5310,7 @@ declare namespace THREE {
 
         }
 
-        export namespace WebXRManager {
+        export module WebXRManager {
 
             export interface sessionOptions {
 
@@ -5483,13 +5483,13 @@ declare namespace THREE {
 
         export class Composite {
 
-            _targetGroup: any,
-            _bindings: Array<PropertyBinding>,
+            _targetGroup: any;
+            _bindings: Array<PropertyBinding>;
 
-            getValue(array: Array<any>, offset: number): void,
-            setValue(array: Array<any>, offset: number): void,
-            bind(): void,
-            unbind(): void
+            getValue(array: Array<any>, offset: number): void;
+            setValue(array: Array<any>, offset: number): void;
+            bind(): void;
+            unbind(): void;
 
         }
 
@@ -5541,7 +5541,7 @@ declare namespace THREE {
 
         }
 
-        namespace WebGLRenderList {
+        module WebGLRenderList {
 
             export interface Item {
 

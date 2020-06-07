@@ -8,4 +8,5 @@
 0.1.8 #6 2020 Jun 6: Updated README.md  
 0.1.10 #7 2020 Jun 6: Updated CHANGELOG.md  
 0.2.0 #8 2020 Jun 6: Created defination of DragControls.js  
-0.2.1 #9 2020 Jun 7: Created defination of EditorControls.js  
+0.2.1 #9 2020 Jun 6: Created defination of EditorControls.js  
+0.2.3 #10 2020 Jun 6: Created defination of three controls.  
