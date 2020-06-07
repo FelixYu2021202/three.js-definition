@@ -11,7 +11,7 @@ But when you write it in your javascript, you'll notice that it is *not* origina
 
 So, if you more like Typescript, you can even use it!
 
-If there's ***any*** problems with the defination, please update first, if the problem is *not* fixed, then ask it *clearly* from the github issue, like "There's member XXX in class XXX that typed string."(Please say the type unless you don't know).  
+If there's ***any*** problems with the defination, please update first, if the problem is *not* fixed, then ask it *clearly* from the github issue, like "There's member XXX in class XXX that typed string."(Please try to tell the type unless you don't know).
 
 ***~Enjoy!***
 
@@ -27,6 +27,10 @@ Three.js是一个很好的帮助使用WebGL的LIB，但是在你写JS代码时�
 
 现在，如果你更喜欢Typescript，那么就用就行了！
 
-如果定义脚本有**任何**的问题，请先更新这个插件，如果问题还没解决，那就在GitHub上的Issue上把问题问的*尽量清楚*，像“类XXX有成员XXX，它的类型是string。”
+如果定义脚本有**任何**的问题，请先更新这个插件，如果问题还没解决，那就在GitHub上的Issue上把问题问的*尽量清楚*，像“类XXX有成员XXX，它的类型是string。”（请尽量告诉类型，除非你不知道）
 
 ***~享受吧！***
+
+
+Last Change 上一次更新：
+    0.2.3 #10 2020 Jun 6: Created defination of three controls.  
