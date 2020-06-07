@@ -33,4 +33,4 @@ Three.js是一个很好的帮助使用WebGL的LIB，但是在你写JS代码时�
 
 
 Last Change 上一次更新：
-    0.2.3 #10 2020 Jun 6: Created defination of three controls.  
+    0.2.5 #12 2020 Jun 6: Created the view using this extension.  

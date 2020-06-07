@@ -11,3 +11,4 @@
 0.2.1 #9 2020 Jun 6: Created defination of EditorControls.js  
 0.2.3 #10 2020 Jun 6: Created defination of three controls.  
 0.2.4 #11 2020 Jun 6: Updated README.md
+0.2.5 #12 2020 Jun 6: Created the view using this extension.  
