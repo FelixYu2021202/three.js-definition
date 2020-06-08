@@ -91,10 +91,10 @@ declare module THREE {
         setViewport(x: number, y: number, width: number, height: number): void;
         setScissor(x: number, y: number, width: number, height: number): void;
         setScissorTest(boolean: boolean): void;
-        getClearColor();
-        setClearColor(...arguments: Array<any>): void;
-        getClearAlpha();
-        setClearAlpha(...arguments: Array<any>): void;
+        getClearColor(): Color;
+        setClearColor(color: number | string | Color, alpha: number): void;
+        getClearAlpha(): number;
+        setClearAlpha(alpha: number): void;
         clear(color: boolean, depth: boolean, stencil: boolean): void;
         clearColor(): void;
         clearDepth(): void;
