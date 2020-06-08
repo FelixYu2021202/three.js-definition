@@ -1,4 +1,4 @@
-# Three Defination \# en
+<!-- # Three Defination \# en
 Three.js is a very good lib to help you to use WebGL, but when you write the javascript code, you might not know if some variables or functions is in THREE object or not. Because this problem, I made this extension to solve it.  
 This is an extension for learning-threejs-third, you can use the defination script in this extension to help you know the variables and functions.
 
@@ -13,9 +13,9 @@ So, if you more like Typescript, you can even use it!
 
 If there's ***any*** problems with the defination, please update first, if the problem is *not* fixed, then ask it *clearly* from the github issue, like "There's member XXX in class XXX that typed string."(Please try to tell the type unless you don't know).
 
-***~Enjoy!***
+***~Enjoy!*** -->
 
-# Three Defination \# zh
+# Three Defination <!-- \# zh -->
 Three.js是一个很好的帮助使用WebGL的LIB，但是在你写JS代码时，你有可能不知道在THREE里面有没有一些变量或函数。因为有这个问题，所以我做了这个扩展库来解决它。  
 这是一个learning-threejs-third的扩展库，你可以用它的定义脚本来让你知道哪些变量或函数。
 
@@ -32,5 +32,8 @@ Three.js是一个很好的帮助使用WebGL的LIB，但是在你写JS代码时�
 ***~享受吧！***
 
 
-Last Change 上一次更新：
-    0.2.5 #12 2020 Jun 6: Created the view using this extension.  
+<!-- Last Change  -->上一次更新：
+    0.2.6 #13 2020 Jun 7: Updated README.md  
+
+<!-- Full update log -->完整的更新见CHANGELOG.md
+[CHANGELOG.md](https://yufeixian.github.io/three.js-defination/CHANGELOG.md)
