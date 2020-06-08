@@ -27,13 +27,13 @@ Three.js是一个很好的帮助使用WebGL的LIB，但是在你写JS代码时�
 
 现在，如果你更喜欢Typescript，那么就用就行了！
 
-如果定义脚本有**任何**的问题，请先更新这个插件，如果问题还没解决，那就在GitHub上的Issue上把问题问的*尽量清楚*，像“类XXX有成员XXX，它的类型是string。”（请尽量告诉类型，除非你不知道）
+如果定义脚本有**任何**的问题，请先更新这个插件，如果问题还没解决，那就在GitHub上的Issue上把问题告诉得*尽量清楚*，像“类XXX有成员XXX，它的类型是string。”（请尽量告诉类型，除非你不知道）
 
 ***~享受吧！***
 
 
 <!-- Last Change  -->上一次更新：
-    0.2.8 #15 2020 Jun 7: Updated README.md  
+    0.2.9 #16 2020 Jun 7: Updated README.md  
 
 <!-- Full update log -->完整的更新见CHANGELOG.md
 [CHANGELOG.md](https://github.com/yufeixian/three.js-defination/blob/master/CHANGELOG.md)
