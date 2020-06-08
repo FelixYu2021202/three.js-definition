@@ -17,3 +17,4 @@
 0.2.8 #15 2020 Jun 7: Updated README.md  
 0.2.9 #16 2020 Jun 7: Updated README.md  
 0.2.10 #17 2020 Jun 7: Updated README.md  
+0.2.11 #18 2020 Jun 7: Created & Update defination of some controls  

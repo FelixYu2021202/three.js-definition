@@ -4,7 +4,7 @@ declare module THREE {
 
     export class FirstPersonControls {
 
-        constructor(object: /* THREE. */Object3D, domElement: HTMLElement | Document);
+        constructor(object: /* THREE. */Camera, domElement: HTMLElement | Document);
 
         object: /* THREE. */Object3D;
         target: /* THREE. */Vector3;

@@ -32,8 +32,5 @@ Three.js是一个很好的帮助使用WebGL的LIB，但是在你写JS代码时�
 ***~享受吧！***
 
 
-<!-- Last Change  -->上一次更新：
-    0.2.10 #17 2020 Jun 7: Updated README.md  
-
-<!-- Full update log -->完整的更新见CHANGELOG.md
+<!-- Full update log -->更新日志见CHANGELOG.md
 [CHANGELOG.md](https://github.com/yufeixian/three.js-defination/blob/master/CHANGELOG.md)

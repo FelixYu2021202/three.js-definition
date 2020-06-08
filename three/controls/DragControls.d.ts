@@ -4,7 +4,7 @@ declare module THREE {
 
     export class DragControls extends /* THREE. */EventDispatcher {
 
-        constructor(_objects: /* THREE. */Object3D, _camera: /* THREE. */Camera, _domElement: HTMLElement);
+        constructor(_objects: /* THREE. */Camera, _camera: /* THREE. */Camera, _domElement: HTMLElement);
 
         enabled: boolean;
 

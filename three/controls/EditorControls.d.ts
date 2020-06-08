@@ -4,7 +4,7 @@ declare module THREE {
 
     export class EditorControls extends /* THREE. */EventDispatcher {
 
-        constructor(object: /* THREE. */Object3D, domElement: HTMLElement | Document);
+        constructor(object: /* THREE. */Camera, domElement: HTMLElement | Document);
 
         enabled: boolean;
         center: /* THREE. */Vector3;
