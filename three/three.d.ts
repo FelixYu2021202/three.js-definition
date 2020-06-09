@@ -1884,6 +1884,7 @@ declare module THREE {
 
         id: number;
         uuid: string;
+        name: string;
         type: string;
         parent: Object3D;
         children: Array<Object3D>;

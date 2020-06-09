@@ -25,3 +25,4 @@
     02. Fixed bug in THREE.SpotLightShadow  
     03. Fixed bug in THREE.WebGLRenderer  
 0.2.16 #22 2020 Jun 9: Fixed bug in THREE.PerspectiveCamera  
+0.2.17 #23 2020 Jun 9: Fixed bug in THREE.Object3D  
