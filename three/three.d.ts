@@ -1208,7 +1208,7 @@ declare module THREE {
         getFilmHeight(): number;
         setViewOffset(fullWidth: number, fullHeight: number, x: number, y: number, width: number, height: number): void;
         clearViewOffset(): void;
-        uodateProgectionMatrix(): void;
+        updateProjectionMatrix(): void;
         toJSON(meta: string): { };
 
     }
