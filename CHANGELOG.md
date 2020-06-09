@@ -20,3 +20,7 @@
 0.2.11 #18 2020 Jun 7: Created & Update defination of some controls  
 0.2.13 #19 2020 Jun 7: Fixed bug in THREE.WebGLRenderer  
 0.2.14 #20 2020 Jun 7: Fixed bug in THREE.Mesh  
+0.2.15 #21 2020 Jun 7:  
+    01. Updated README.md  
+    02. Fixed bug in THREE.SpotLightShadow  
+    03. Fixed bug in THREE.WebGLRenderer  

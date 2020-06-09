@@ -1033,6 +1033,8 @@ declare module THREE {
 
     export class SpotLightShadow extends LightShadow {
 
+        camera: PerspectiveCamera;
+
         ["constructor"]: typeof SpotLightShadow;
         isSpotLightShadow: true;
 
@@ -5343,7 +5345,7 @@ declare module THREE {
             enabled: boolean;
             autoUpdate: boolean;
             needsUpdate: boolean;
-            type: string;
+            type: number;
             render(lights: Array<Light>, scene: Scene, camera: Camera): void;
 
         }
