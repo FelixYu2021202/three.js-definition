@@ -8,8 +8,8 @@ declare module THREE {
 
         enabled: boolean;
 
-        dispose(): void;
-        getObject(): /* THREE. */Object3D;
+        dispose: VoidFunction;
+        getObject(): Object3D;
         getDirection(v: Vector3): Vector3;
 
     }

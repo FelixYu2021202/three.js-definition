@@ -26,6 +26,9 @@
     03. Fixed bug in THREE.WebGLRenderer  
 0.2.16 #22 2020 Jun 9: Fixed bug in THREE.PerspectiveCamera  
 0.2.17 #23 2020 Jun 9: Fixed bug in THREE.Object3D  
-0.2.19 #24 2020 Jun 10:
+0.2.19 #24 2020 Jun 10:  
     01. Fixed bug in LineBasicMaterial  
     02. Created the defination of TransformControls.js(not finished)  
+0.2.21 #25 2020 Jun 11:  
+    01. Fixed bug in all definations  
+    02. Created the defination of TransformControls.js  

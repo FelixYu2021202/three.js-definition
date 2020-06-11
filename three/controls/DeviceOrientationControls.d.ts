@@ -12,10 +12,10 @@ declare module THREE {
         screenOrientation: number;
         alphaOffset: number;
 
-        connect(): void;
-        disconnect(): void;
-        update(): void;
-        dispose(): void;
+        connect: VoidFunction;
+        disconnect: VoidFunction;
+        update: VoidFunction;
+        dispose: VoidFunction;
 
     }
 

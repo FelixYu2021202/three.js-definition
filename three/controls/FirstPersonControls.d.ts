@@ -4,10 +4,10 @@ declare module THREE {
 
     export class FirstPersonControls {
 
-        constructor(object: /* THREE. */Camera, domElement: HTMLElement | Document);
+        constructor(object: Camera, domElement: HTMLElement | Document);
 
-        object: /* THREE. */Object3D;
-        target: /* THREE. */Vector3;
+        object: Object3D;
+        target: Vector3;
         domElement: HTMLElement | Document;
         enabled: boolean;
         movementSpeed: number;
@@ -37,14 +37,14 @@ declare module THREE {
         viewHalfX: number;
         viewHalfY: number;
 
-        handleResize(): void;
+        handleResize: VoidFunction;
         onMouseDown(event: MouseEvent): void;
         onMouseUp(event: MouseEvent): void;
         onMouseMove(event: MouseEvent): void;
         onKeyDown(event: KeyboardEvent): void;
         onKeyUp(event: KeyboardEvent): void;
         update(delta: number): void;
-        dispose(): void;
+        dispose: VoidFunction;
 
     }
 

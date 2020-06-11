@@ -4,15 +4,15 @@ declare module THREE {
 
     export class FlyControls {
 
-        constructor(object: /* THREE. */Camera, domElement: HTMLElement | Document);
+        constructor(object: Camera, domElement: HTMLElement | Document);
 
-        object: /* THREE. */Object3D;
+        object: Object3D;
         domElement: HTMLElement | Document;
         movementSpeed: number;
         rollSpeed: number;
         dragToLook: boolean;
         autoForward: boolean;
-        tmpQuaternion: /* THREE. */Quaternion;
+        tmpQuaternion: Quaternion;
         mouseStatus: number;
         moveState: {
 
@@ -30,18 +30,18 @@ declare module THREE {
             rollRight: number
 
         };
-        moveVector: /* THREE. */Vector3;
-        rotationVector: /* THREE. */Vector3;
+        moveVector: Vector3;
+        rotationVector: Vector3;
         handleEvent(event: Event): void;
         keydown(event: KeyboardEvent): void;
         keyup(event: KeyboardEvent): void;
         mousedown(event: MouseEvent): void;
         mouseup(event: MouseEvent): void;
         update(delta: number): void;
-        updateMovementVector(): void;
-        updateRotationVector(): void;
+        updateMovementVector: VoidFunction;
+        updateRotationVector: VoidFunction;
         getContainerDimensions(): __internal.FlyControls.containerDimension;
-        dispose(): void;
+        dispose: VoidFunction;
 
     }
 

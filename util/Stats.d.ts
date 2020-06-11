@@ -7,9 +7,9 @@ declare var Stats: {
     
         addPanel<T extends HTMLElement>(pannel: {dom: T}): {dom: T},
         showPanel(id: number): void,
-        begin(): void,
+        begin: VoidFunction,
         end(): number,
-        update(): void,
+        update: VoidFunction,
 
         domElement: HTMLDivElement,
         setMode(id: number): void

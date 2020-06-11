@@ -2,11 +2,11 @@
 
 declare module THREE {
 
-    export class OrthographicTrackballControls extends /* THREE. */EventDispatcher {
+    export class OrthographicTrackballControls extends EventDispatcher {
 
-        constructor(object: /* THREE. */OrthographicCamera, domElement: HTMLElement | Document);
+        constructor(object: OrthographicCamera, domElement: HTMLElement | Document);
 
-        object: /* THREE. */Object3D;
+        object: Object3D;
         domElement: HTMLElement | Document;
         enabled: boolean;
         screen: {
@@ -25,23 +25,23 @@ declare module THREE {
         staticMoving: boolean;
         dynamicDampingFactor: number;
         keys: Array<number>;
-        target: /* THREE. */Vector3;
-        target0: /* THREE. */Vector3;
-        position0: /* THREE. */Vector3;
-        up0: /* THREE. */Vector3;
+        target: Vector3;
+        target0: Vector3;
+        position0: Vector3;
+        up0: Vector3;
         left0: number;
         right0: number;
         top0: number;
         bottom0: number;
 
-        handleResize(): void;
+        handleResize: VoidFunction;
         handleEvent(event: Event): void;
-        rotateCamera(): void;
-        zoomCamera(): void;
-        panCamera(): void;
-        update(): void;
-        reset(): void;
-        dispose(): void;
+        rotateCamera: VoidFunction;
+        zoomCamera: VoidFunction;
+        panCamera: VoidFunction;
+        update: VoidFunction;
+        reset: VoidFunction;
+        dispose: VoidFunction;
 
         ["constructor"]: typeof OrthographicTrackballControls;
 

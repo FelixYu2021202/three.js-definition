@@ -2,54 +2,20 @@
 
 declare module THREE {
 
-    // export class GizmoMaterial extends /* THREE. */MeshBasicMaterial {
+    export class TransformGizmo extends Object3D {
 
-    //     constructor(parameters: /* THREE. */__internal.Material.BasicParameter);
+        init: VoidFunction;
 
-    //     oldColor: /* THREE. */Color;
-    //     oldOpacity: number;
-
-    //     highlight(highlighted: boolean): void;
-
-    //     ["constructor"]: typeof /* THREE. */MeshBasicMaterial.prototype.constructor & typeof GizmoMaterial;
-
-    // }
-
-    // export class GizmoLineMaterial extends /* THREE. */LineBasicMaterial {
-
-    //     constructor(parameters: {
-
-    //         color: number,
-    //         opacity: number,
-    //         linewidth: number,
-    //         linecap: string,
-    //         linejoin: string
-
-    //     });
-
-    //     oldColor: /* THREE. */Color;
-    //     oldOpacity: number;
-
-    //     highlight(highlighted: boolean): void;
-
-    //     ["constructor"]: typeof /* THREE. */LineBasicMaterial.prototype.constructor & typeof GizmoLineMaterial;
-
-    // }
-
-    export class TransformGizmo extends /* THREE. */Object3D {
-
-        init(): void;
-
-        handlers: /* THREE. */Object3D;
-        pickers: /* THREE. */Object3D;
-        planes: /* THREE. */Object3D;
-        activePlane: /* THREE. */Mesh;
+        handlers: Object3D;
+        pickers: Object3D;
+        planes: Object3D;
+        activePlane: Mesh;
 
         highlight(axis: string): void;
 
         ["constructor"]: typeof Object3D & typeof TransformGizmo;
 
-        update(rotation: /* THREE. */Euler, eye: Vector3): void;
+        update(rotation: Euler, eye: Vector3): void;
 
     }
 
@@ -58,25 +24,107 @@ declare module THREE {
         handleGizmos: __internal.TransformGizmoTranslate.Gizmos;
         pickerGizmos: __internal.TransformGizmoTranslate.Gizmos;
 
+        setActivePlane(axis: __internal.TransformGizmo.Axis | "XY" | "YZ" | "XZ", eye: Vector3): void;
+
+        ["constructor"]: typeof TransformGizmo.prototype.constructor & typeof TransformGizmoTranslate;
+
+    }
+
+    export class TransformGizmoRotate extends TransformGizmo {
+
+        handleGizmos: __internal.TransformGizmoRotate.Gizmos;
+        pickerGizmos: __internal.TransformGizmoRotate.Gizmos;
+
+        setActivePlane(axis: "X" | "Y" | "Z" | "E"): void;
+        update(rotation: Euler, eye2: Vector3): void;
+
+        ["constructor"]: typeof TransformGizmo.prototype.constructor & typeof TransformGizmoRotate;
+
+    }
+
+    export class TransformGizmoScale extends TransformGizmo {
+
+        handleGizmos: __internal.TransformGizmoScale.Gizmos;
+        pickerGizmos: __internal.TransformGizmoScale.Gizmos;
+
+        setActivePlane(axis: __internal.TransformGizmo.Axis, eye: Vector3): void;
+
+        ["constructor"]: typeof TransformGizmo.prototype.constructor & typeof TransformGizmoScale;
+
+    }
+
+    export class TransformControls extends Object3D {
+
+        constructor(camera: Camera, domElement: HTMLElement | Document);
+
+        object: Object3D;
+        trnaslationSnap: number;
+        rotationSnap: number;
+        space: string;
+        size: number;
+        axis: __internal.TransformGizmo.Axis;
+
+        dispose: VoidFunction;
+        attach(object: Object3D): void;
+        detach: VoidFunction;
+        getMode(): string;
+        setMode(mode: string): void;
+        setTranslationSnap(translationSnap: number): void;
+        setRotationSnap(rotationSnap: number): void;
+        setSize(size: number): void;
+        setSpace(space: string): void;
+        update: VoidFunction;
+
+        ["constructor"]: typeof Object3D & typeof TransformControls;
+
     }
 
     module __internal {
 
+        module TransformGizmo {
+
+            export type gizmo = [[Mesh], [Line]];
+            export type gizmo2 = [[Mesh]];
+
+            export interface Gizmos<T extends (gizmo | gizmo2)> {
+
+                X: T;
+                Y: T;
+                Z: T;
+
+            }
+
+            type Axis = "X" | "Y" | "Z" | "XYZ";
+
+        }
+
         export module TransformGizmoTranslate {
 
-            export type gizmo = [[/* THREE. */Mesh], [/* THREE. */Line]];
-            export type gizmo2 = [[/* THREE. */Mesh]];
-            export interface Gizmos {
+            export interface Gizmos extends TransformGizmo.Gizmos<TransformGizmo.gizmo> {
 
-                X: __internal.TransformGizmoTranslate.gizmo;
-                Y: __internal.TransformGizmoTranslate.gizmo;
-                Z: __internal.TransformGizmoTranslate.gizmo;
-                XYZ: __internal.TransformGizmoTranslate.gizmo2;
-                XY: __internal.TransformGizmoTranslate.gizmo2;
-                YZ: __internal.TransformGizmoTranslate.gizmo2;
-                XZ: __internal.TransformGizmoTranslate.gizmo2;
+                XYZ: __internal.TransformGizmo.gizmo2;
+                XY: __internal.TransformGizmo.gizmo2;
+                YZ: __internal.TransformGizmo.gizmo2;
+                XZ: __internal.TransformGizmo.gizmo2;
     
             }
+
+        }
+
+        export module TransformGizmoRotate {
+
+            export interface Gizmos extends TransformGizmo.Gizmos<TransformGizmo.gizmo2> {
+
+                E: TransformGizmo.gizmo2;
+                XYZE: TransformGizmo.gizmo2;
+
+            }
+
+        }
+
+        export module TransformGizmoScale {
+
+            export interface Gizmos extends TransformGizmo.Gizmos<TransformGizmo.gizmo> { XYZ: TransformGizmo.gizmo2; }
 
         }
 

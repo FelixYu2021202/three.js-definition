@@ -2,21 +2,21 @@
 
 declare module THREE {
 
-    export class EditorControls extends /* THREE. */EventDispatcher {
+    export class EditorControls extends EventDispatcher {
 
-        constructor(object: /* THREE. */Camera, domElement: HTMLElement | Document);
+        constructor(object: Camera, domElement: HTMLElement | Document);
 
         enabled: boolean;
-        center: /* THREE. */Vector3;
+        center: Vector3;
         panSpeed: number;
         zoomSpeed: number;
         rotationSpeed: number;
 
         focus(target: any): void;
-        pan(delta: /* THREE. */Vector3): void;
-        zoom(delta: /* THREE. */Vector3): void;
-        rotate(delta: /* THREE. */Vector2): void;
-        dispose(): void;
+        pan(delta: Vector3): void;
+        zoom(delta: Vector3): void;
+        rotate(delta: Vector2): void;
+        dispose: VoidFunction;
 
         ["constructor"]: typeof EditorControls;
 

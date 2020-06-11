@@ -2,17 +2,17 @@
 
 declare module THREE {
 
-    export class DragControls extends /* THREE. */EventDispatcher {
+    export class DragControls extends EventDispatcher {
 
-        constructor(_objects: /* THREE. */Camera, _camera: /* THREE. */Camera, _domElement: HTMLElement);
+        constructor(_objects: Camera, _camera: Camera, _domElement: HTMLElement);
 
         enabled: boolean;
 
-        activate(): void;
-        deactivate(): void;
-        dispose(): void;
+        activate: VoidFunction;
+        deactivate: VoidFunction;
+        dispose: VoidFunction;
 
-        setObjects(): void;
+        setObjects: VoidFunction;
         on(type: string, listener: any): void;
         off(type: string, listener: any): void;
         notify(type: string): void;

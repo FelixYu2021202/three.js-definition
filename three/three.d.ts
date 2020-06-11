@@ -32,7 +32,7 @@ declare module THREE {
         setSize(width: number, height: number): void;
         clone(): WebGLRenderTarget;
         copy(source: WebGLRenderTarget): WebGLRenderTarget;
-        dispose(): void;
+        dispose: VoidFunction;
 
     }
 
@@ -79,10 +79,10 @@ declare module THREE {
 
         getContext(): WebGL2RenderingContext | WebGLRenderingContext;
         getContextAttributes();
-        forceContextLoss(): void;
-        forceContextRestore(): void;
+        forceContextLoss: VoidFunction;
+        forceContextRestore: VoidFunction;
         getPixelRatio(): number;
-        setPixelRatio(): void;
+        setPixelRatio: VoidFunction;
         getSize(): __internal.WebGLRenderer.Size;
         setSize(width: number, height: number, updateStyle: any): void;
         getDrawingBufferSize(): __internal.WebGLRenderer.Size;
@@ -96,11 +96,11 @@ declare module THREE {
         getClearAlpha(): number;
         setClearAlpha(alpha: number): void;
         clear(color: boolean, depth: boolean, stencil: boolean): void;
-        clearColor(): void;
-        clearDepth(): void;
-        clearStencil(): void;
+        clearColor: VoidFunction;
+        clearDepth: VoidFunction;
+        clearStencil: VoidFunction;
         clearTarget(renderTarget: any, color: boolean, depth: boolean, stencil: boolean): void;
-        dispose(): void;
+        dispose: VoidFunction;
 
         renderBufferImmediate(object: any, program: number): void;
         renderBufferDirect(camera: Camera, fog: any, geometry: any, material: Material, object: any, group: any): void;
@@ -529,8 +529,8 @@ declare module THREE {
 
         initBones(): Array<Bone>;
         bind(skeleton: Skeleton, bindMatrix: Matrix4): void;
-        pose(): void;
-        normalizeSkinWeights(): void;
+        pose: VoidFunction;
+        normalizeSkinWeights: VoidFunction;
         updateMatrixWorld(force: boolean): void;
         clone(): SkinnedMesh;
 
@@ -544,9 +544,9 @@ declare module THREE {
         boneMatrices: Float32Array;
         boneInverses: Array<Matrix4>;
 
-        calculateInverses(): void;
-        pose(): void;
-        update(): void;
+        calculateInverses: VoidFunction;
+        pose: VoidFunction;
+        update: VoidFunction;
         clone(): Skeleton;
         getBoneByName(name: string): Bone;
 
@@ -572,7 +572,7 @@ declare module THREE {
 
         setDrawMode(value: number): void;
         copy(source: Mesh): Mesh;
-        updateMorphTargets(): void;
+        updateMorphTargets: VoidFunction;
         raycast(raycaster: Raycaster, intersects: any): void;
         clone(): Mesh;
 
@@ -614,7 +614,7 @@ declare module THREE {
         isLine: true;
 
         computeLineDistances(): Line;
-        raycast(): void;
+        raycast: VoidFunction;
         clone(): Line;
 
     }
@@ -629,7 +629,7 @@ declare module THREE {
 
         ["constructor"]: typeof Object3D & typeof Points;
         isPoints: true;
-        raycast(): void;
+        raycast: VoidFunction;
         clone(): Points;
 
     }
@@ -652,7 +652,7 @@ declare module THREE {
         ["constructor"]: typeof VideoTexture;
         isVideoTexture: true;
 
-        update(): void;
+        update: VoidFunction;
 
     }
 
@@ -774,11 +774,11 @@ declare module THREE {
         ["constructor"]: typeof Texture;
         isTexture: true;
 
-        updateMatrix(): void;
+        updateMatrix: VoidFunction;
         clone(): Texture;
         copy(source: Texture): Texture;
         toJSON(meta: string): { };
-        dispose(): void;
+        dispose: VoidFunction;
         transformUv(uv: Vector2): void;
         set needsUpdate(value: boolean);
 
@@ -1019,7 +1019,7 @@ declare module THREE {
         add(key: string, file: string): void;
         get(key: string): string;
         remove(key: string): void;
-        clear(): void;
+        clear: VoidFunction;
 
     }
 
@@ -1207,8 +1207,8 @@ declare module THREE {
         getFilmWidth(): number;
         getFilmHeight(): number;
         setViewOffset(fullWidth: number, fullHeight: number, x: number, y: number, width: number, height: number): void;
-        clearViewOffset(): void;
-        updateProjectionMatrix(): void;
+        clearViewOffset: VoidFunction;
+        updateProjectionMatrix: VoidFunction;
         toJSON(meta: string): { };
 
     }
@@ -1231,8 +1231,8 @@ declare module THREE {
         isOrthographicCamera: true;
         copy(source: Object3D & Camera & OrthographicCamera, recursive: boolean): Object3D & Camera & OrthographicCamera;
         setViewOffset(fullWidth: number, fullHeight: number, x: number, y: number, width: number, height: number): void;
-        clearViewOffset(): void;
-        updateProjectionMatrix(): void;
+        clearViewOffset: VoidFunction;
+        updateProjectionMatrix: VoidFunction;
         toJSON(meta: string): { };
 
     }
@@ -1290,7 +1290,7 @@ declare module THREE {
         setFilter(value: AudioNode): AudioListener;
         getMasterVolume(): number;
         setMasterVolume(value: number): AudioListener;
-        updateMatrixWorld(): void;
+        updateMatrixWorld: VoidFunction;
 
     }
 
@@ -1370,7 +1370,7 @@ declare module THREE {
         setFilter(filter: any): Audio;
         setPlaybackRate(value: number): Audio;
         getPlaybackRate(): number;
-        onEnded(): void;
+        onEnded: VoidFunction;
         getLoop(): boolean;
         setLoop(value: boolean): Audio;
         getVolume(): number;
@@ -1457,8 +1457,8 @@ declare module THREE {
 
         accumulate(accuIndex: number, weight: number): void;
         apply(accuIndex: number): void;
-        saveOriginalState(): void;
-        restoreOriginalState(): void;
+        saveOriginalState: VoidFunction;
+        restoreOriginalState: VoidFunction;
         _select: __internal.PropertyMixer.mixer;
         _slerp: __internal.PropertyMixer.mixer;
         _lerp: __internal.PropertyMixer.mixer;
@@ -1480,8 +1480,8 @@ declare module THREE {
         static parseTrackName(trackName: string): __internal.PropertyBinding.TrackName;
         static findNode(root: any, nodeName: string): any;
 
-        _getValue_unavailable(): void;
-        _setValue_unavailable(): void;
+        _getValue_unavailable: VoidFunction;
+        _setValue_unavailable: VoidFunction;
 
         BindingType: {
 
@@ -1502,8 +1502,8 @@ declare module THREE {
         SetterByBindingTypeAndVersioning: __internal.PropertyBinding.set;
         getValue: __internal.PropertyBinding.BindingFunction;
         setValue: __internal.PropertyBinding.BindingFunction;
-        bind(): void;
-        unbind(): void;
+        bind: VoidFunction;
+        unbind: VoidFunction;
         _getValue_unbound: __internal.PropertyBinding.get;
         _setValue_unbound: __internal.PropertyBinding.set;
 
@@ -1573,9 +1573,9 @@ declare module THREE {
         }
 
         isAnimationObjectGroup: true;
-        add(): void;
-        remove(): void;
-        uncache(): void;
+        add: VoidFunction;
+        remove: VoidFunction;
+        uncache: VoidFunction;
         subscribe_(path: string, parsedPath: string): Array<string>;
         unsubscribe_(path: string): void;
 
@@ -1594,7 +1594,7 @@ declare module THREE {
         _bindAction(action: any, protytypeAction: any): void;
         _activateAction(action: any): void;
         _deactivateAction(action: any): void;
-        _initMemoryManager(): void;
+        _initMemoryManager: VoidFunction;
         _actions: Array<any>;
         _nActiveActions: number;
         _actionsByClip: { };
@@ -1706,7 +1706,7 @@ declare module THREE {
         getAttribute(name: string): any;
         removeAttribute(name: string): BufferGeometry;
         addGroup(start: number, count: number, materialIndex: number): void;
-        clearGroups(): void;
+        clearGroups: VoidFunction;
         setDrawRange(start: number, count: number): void;
         applyMatrix(matrix: Matrix3 | Matrix4): BufferGeometry;
         rotateX(angle: number): BufferGeometry;
@@ -1721,17 +1721,17 @@ declare module THREE {
         updateFromObject(object: any): BufferGeometry;
         fromGeometry(geometry: Geometry): BufferGeometry;
         fromDirectGeometry(geometry: __internal.DirectGeometry): BufferGeometry;
-        computeBoundingBox(): void;
-        computeBoundingSphere(): void;
-        computeFaceNormals(): void;
-        computeVertexNormals(): void;
+        computeBoundingBox: VoidFunction;
+        computeBoundingSphere: VoidFunction;
+        computeFaceNormals: VoidFunction;
+        computeVertexNormals: VoidFunction;
         merge(geometry: BufferGeometry, offset: number): BufferGeometry;
-        normalizeNormals(): void;
+        normalizeNormals: VoidFunction;
         toNonIndexed(): BufferGeometry;
         toJSON(): { };
         clone(): BufferGeometry;
         copy(source: BufferGeometry): BufferGeometry;
-        dispose(): void;
+        dispose: VoidFunction;
 
     }
 
@@ -1772,17 +1772,17 @@ declare module THREE {
         fromBufferGeometry(geometry: BufferGeometry): Geometry;
         center(): Geometry;
         normalize(): Geometry;
-        computeFaceNormals(): void;
-        computeVertexNormals(): void;
-        computeFlatVectexNormals(): void;
-        computeMorphNormals(): void;
-        computeBoundingBox(): void;
-        computeBoundingSphere(): void;
+        computeFaceNormals: VoidFunction;
+        computeVertexNormals: VoidFunction;
+        computeFlatVectexNormals: VoidFunction;
+        computeMorphNormals: VoidFunction;
+        computeBoundingBox: VoidFunction;
+        computeBoundingSphere: VoidFunction;
         merge(geometry: Geometry, matrix: Matrix3 | Matrix4, materialIndexOffset: number): void;
         mergeMesh(mesh: Mesh): void;
         mergeVertices(): number;
         setFromPoints(points: Array<number>): Geometry;
-        sortFacesByMaterialIndex(): void;
+        sortFacesByMaterialIndex: VoidFunction;
         toJSON(): { };
         clone(): Geometry;
         copy(source: Geometry): Geometry;
@@ -1945,7 +1945,7 @@ declare module THREE {
         traverse(callback: __internal.Object3D.traverseFn): void;
         traverseVisible(callback: __internal.Object3D.traverseFn): void;
         traverseAncestors(callback: __internal.Object3D.traverseFn): void;
-        updateMatrix(): void;
+        updateMatrix: VoidFunction;
         updateMatrixWorld(force: boolean): void;
         toJSON(meta: string): { };
         clone(recursive: boolean): Object3D;
@@ -2013,8 +2013,8 @@ declare module THREE {
         elapsedTime: number;
         running: boolean;
 
-        start(): void;
-        stop(): void;
+        start: VoidFunction;
+        stop: VoidFunction;
         getElapsedTime(): number;
         getDelta(): number;
 
@@ -2794,7 +2794,7 @@ declare module THREE {
 
         ["constructor"]: typeof LineSegments.prototype.constructor & typeof VertexNormalsHelper;
 
-        update(): void;
+        update: VoidFunction;
 
     }
 
@@ -2810,8 +2810,8 @@ declare module THREE {
         cone: LineSegments;
 
         ["constructor"]: typeof Object3D & SpotLightHelper;
-        dispose(): void;
-        update(): void;
+        dispose: VoidFunction;
+        update: VoidFunction;
 
     }
 
@@ -2840,8 +2840,8 @@ declare module THREE {
 
         ["constructor"]: typeof Mesh.prototype.constructor & typeof PointLightHelper;
 
-        dispose(): void;
-        update(): void;
+        dispose: VoidFunction;
+        update: VoidFunction;
 
     }
 
@@ -2857,8 +2857,8 @@ declare module THREE {
 
         ["constructor"]: typeof Object3D & typeof RectAreaLightHelper;
 
-        dispose(): void;
-        update(): void;
+        dispose: VoidFunction;
+        update: VoidFunction;
 
     }
 
@@ -2874,8 +2874,8 @@ declare module THREE {
 
         ["constructor"]: typeof Object3D & typeof HemisphereLightHelper;
 
-        dispose(): void;
-        update(): void;
+        dispose: VoidFunction;
+        update: VoidFunction;
 
     }
 
@@ -2905,7 +2905,7 @@ declare module THREE {
 
         ["constructor"]: typeof LineSegments.prototype.constructor & typeof FaceNormalsHelper;
     
-        update(): void;
+        update: VoidFunction;
 
     }
 
@@ -2922,8 +2922,8 @@ declare module THREE {
 
         ["constructor"]: typeof Object3D & typeof DirectionalLightHelper;
 
-        dispose(): void;
-        update(): void;
+        dispose: VoidFunction;
+        update: VoidFunction;
 
     }
 
@@ -2938,7 +2938,7 @@ declare module THREE {
 
         ["constructor"]: typeof LineSegments.prototype.constructor & typeof CameraHelper;
 
-        update(): void;
+        update: VoidFunction;
 
     }
 
@@ -2951,7 +2951,7 @@ declare module THREE {
 
         ["constructor"]: typeof LineSegments.prototype.constructor & typeof BoxHelper;
 
-        update(): void;
+        update: VoidFunction;
         setFromObject(object: Object3D): BoxHelper;
 
     }
@@ -3086,10 +3086,10 @@ declare module THREE {
         ["constructor"]: typeof Curve;
 
         add(curve: LineCurve): void;
-        closePath(): void;
+        closePath: VoidFunction;
         getPoint(t: number): any;
         getLength(): number;
-        updateArcLengths(): void;
+        updateArcLengths: VoidFunction;
         getCurveLength(): Array<number>;
         getSpacedPoints(divisions: number): Array<Vector2>;
         getPoints(divisions: number): Array<Vector2>;
@@ -3109,7 +3109,7 @@ declare module THREE {
         getSpacedPoints(divisions: number): Array<any>;
         getLength(): number;
         getLengths(divisions: number): Array<number>;
-        updateArcLengths(): void;
+        updateArcLengths: VoidFunction;
         getUtoTmapping(u: number, distance: number): number;
         getTangent(t: number): Vector2;
         getTangentAt(u: number): Vector2;
@@ -4445,7 +4445,7 @@ declare module THREE {
         toJSON(meta: string): { };
         clone(): Material;
         copy(source: Material): Material;
-        dispose(): void;
+        dispose: VoidFunction;
 
     }
 
@@ -4925,29 +4925,29 @@ declare module THREE {
 
         projectVector(vector: Vector3, camera: Camera): void;
         unprojectVector(vector: Vector3, camera: Camera): void;
-        pickingRay(): void;
+        pickingRay: VoidFunction;
 
     }
 
     export class CanvasRenderer {
 
         domElement: HTMLElement;
-        clear(): void;
-        render(): void;
-        setClearColor(): void;
-        setSize(): void;
+        clear: VoidFunction;
+        render: VoidFunction;
+        setClearColor: VoidFunction;
+        setSize: VoidFunction;
 
     }
 
     export var SceneUtils: {
 
-        createMultiMaterialObject(): void,
-        detach(): void,
-        attach(): void
+        createMultiMaterialObject: VoidFunction,
+        detach: VoidFunction,
+        attach: VoidFunction
 
     }
 
-    export function LensFlare(): void;
+    export function LensFlare: VoidFunction;
 
     export var __esModule: true;
 
@@ -5307,9 +5307,9 @@ declare module THREE {
             getCamera(camera: Camera): Camera;
             isPresenting(): boolean;
             setAnimationLoop(callback: Function): void;
-            dispose(): void;
+            dispose: VoidFunction;
             getStandingMatrix(): Matrix4;
-            submitFrame(): void;
+            submitFrame: VoidFunction;
 
         }
 
@@ -5336,8 +5336,8 @@ declare module THREE {
             getStandingMatrix(): Matrix4;
             isPresenting(): boolean;
             setAnimationLoop(callback: Function): void;
-            submitFrame(): void;
-            dispose(): void;
+            submitFrame: VoidFunction;
+            dispose: VoidFunction;
 
         }
 
@@ -5371,7 +5371,7 @@ declare module THREE {
             programs: any,
             autoReset: boolean,
 
-            reset(): void,
+            reset: VoidFunction,
             update(count: number, mode: number, instanceCount: number): void;
 
         }
@@ -5410,14 +5410,14 @@ declare module THREE {
             get(object: object): any,
             remove(object: object): void,
             update(object: object, key: string | number | symbol, value: any): void,
-            dispose(): void,
+            dispose: VoidFunction,
 
         }
 
         export interface WebGLRenderLists {
 
             get(scene: Scene, camera: Camera): { [hash: string]: WebGLRenderList },
-            dispose(): void
+            dispose: VoidFunction
 
         }
 
@@ -5430,7 +5430,7 @@ declare module THREE {
                     setMask(colorMask: boolean): void,
                     setLocked(lock: boolean): void,
                     setClear(r: number, g: number, b: number, a: number, premultipliedAlpha: boolean): void,
-                    reset(): void
+                    reset: VoidFunction
 
                 },
                 depth: {
@@ -5440,7 +5440,7 @@ declare module THREE {
                     setFunc(depthFunc: number): void,
                     setLocked(lock: boolean): void,
                     setClear(depth: number): void,
-                    reset(): void
+                    reset: VoidFunction
 
                 },
                 stencil: {
@@ -5451,16 +5451,16 @@ declare module THREE {
                     setOp(stencilFail: number, stencilZFail: number, stencilZPass: number): void,
                     setLocked(lock: boolean): void,
                     setClear(stencil: number): void,
-                    reset(): void
+                    reset: VoidFunction
 
                 }
 
             },
 
-            initAttributes(): void,
+            initAttributes: VoidFunction,
             enableAttribute(attribute: string): void,
             enableAttributeAndDivisor(attribute: string, meshPerAttribute: number): void,
-            disableUnusedAttributes(): void,
+            disableUnusedAttributes: VoidFunction,
             enable(id: number): void,
             disable(id: number): void,
             getCompressedTextureFormats(): Array<number>,
@@ -5478,7 +5478,7 @@ declare module THREE {
             texImage2D(...arguments: Array<number>): void,
             scissor(scissor: Vector4): void,
             viewport(viewport: Vector4): void,
-            reset(): void
+            reset: VoidFunction
 
         }
 
@@ -5491,8 +5491,8 @@ declare module THREE {
 
             getValue(array: Array<any>, offset: number): void;
             setValue(array: Array<any>, offset: number): void;
-            bind(): void;
-            unbind(): void;
+            bind: VoidFunction;
+            unbind: VoidFunction;
 
         }
 
@@ -5529,7 +5529,7 @@ declare module THREE {
         export interface WebGLObjects {
 
             update(object: Object3D): BufferGeometry,
-            dispose(): void
+            dispose: VoidFunction
 
         }
 
@@ -5538,9 +5538,9 @@ declare module THREE {
             opaque: Array<WebGLRenderList.Item>,
             transparent: Array<WebGLRenderList.Item>,
 
-            init(): void,
+            init: VoidFunction,
             push(object: Object3D, geometry: Geometry, material: Material, z: number, group: Group): void,
-            sort(): void
+            sort: VoidFunction
 
         }
 

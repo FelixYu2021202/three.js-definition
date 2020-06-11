@@ -2,11 +2,11 @@
 
 declare module THREE {
 
-    export class TrackballControls extends /* THREE. */EventDispatcher {
+    export class TrackballControls extends EventDispatcher {
 
-        constructor(object: /* THREE. */Camera, domElement: HTMLElement | Document);
+        constructor(object: Camera, domElement: HTMLElement | Document);
 
-        object: /* THREE. */Camera;
+        object: Camera;
         domElement: HTMLElement | Document;
         enabled: boolean;
         screen: {
@@ -28,20 +28,20 @@ declare module THREE {
         minDistance: number;
         maxDistance: number;
         keys: Array<number>;
-        target: /* THREE. */Vector3;
-        target0: /* THREE. */Vector3;
-        position0: /* THREE. */Vector3;
-        up0: /* THREE. */Vector3;
+        target: Vector3;
+        target0: Vector3;
+        position0: Vector3;
+        up0: Vector3;
 
-        handleResize(): void;
+        handleResize: VoidFunction;
         handleEvent(event: Event): void;
-        rotateCamera(): void;
-        zoomCamera(): void;
-        panCamera(): void;
-        checkDistances(): void;
-        update(): void;
-        reset(): void;
-        dispose(): void;
+        rotateCamera: VoidFunction;
+        zoomCamera: VoidFunction;
+        panCamera: VoidFunction;
+        checkDistances: VoidFunction;
+        update: VoidFunction;
+        reset: VoidFunction;
+        dispose: VoidFunction;
 
         ["constructor"]: typeof TrackballControls;
 
