@@ -466,7 +466,7 @@ declare module THREE {
 
         type: string;
         background: any;
-        fog: any;
+        fog: Fog | FogExp2;
         overridematerial: Material;
         autoUpdate: boolean;
 
