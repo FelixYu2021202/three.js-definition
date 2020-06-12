@@ -32,4 +32,5 @@
 0.2.21 #25 2020 Jun 11:  
     01. Fixed bug in all definations  
     02. Created the defination of TransformControls.js  
-0.2.22 #26 2020 Jun 12: Fixed bug in THREE.Scene  
+0.2.22 #26 2020 Jun 11: Fixed bug in THREE.Scene  
+0.2.23 #27 2020 Jun 12: Finished all the definations of the controls.  
