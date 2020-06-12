@@ -21,16 +21,17 @@
 0.2.13 #19 2020 Jun 8: Fixed bug in THREE.WebGLRenderer  
 0.2.14 #20 2020 Jun 8: Fixed bug in THREE.Mesh  
 0.2.15 #21 2020 Jun 8:  
-    01. Updated README.md  
-    02. Fixed bug in THREE.SpotLightShadow  
-    03. Fixed bug in THREE.WebGLRenderer  
+  01. Updated README.md  
+  02. Fixed bug in THREE.SpotLightShadow  
+  03. Fixed bug in THREE.WebGLRenderer  
 0.2.16 #22 2020 Jun 9: Fixed bug in THREE.PerspectiveCamera  
 0.2.17 #23 2020 Jun 9: Fixed bug in THREE.Object3D  
 0.2.19 #24 2020 Jun 10:  
-    01. Fixed bug in LineBasicMaterial  
-    02. Created the defination of TransformControls.js(not finished)  
+  01. Fixed bug in LineBasicMaterial  
+  02. Created the defination of TransformControls.js(not finished)  
 0.2.21 #25 2020 Jun 11:  
-    01. Fixed bug in all definations  
-    02. Created the defination of TransformControls.js  
+  01. Fixed bug in all definations  
+  02. Created the defination of TransformControls.js  
 0.2.22 #26 2020 Jun 11: Fixed bug in THREE.Scene  
 0.2.23 #27 2020 Jun 12: Finished all the definations of the controls.  
+0.3.0 #28 2020 Jun 12: Updated CHANGELOG.md  
