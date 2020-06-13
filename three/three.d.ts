@@ -467,7 +467,7 @@ declare module THREE {
         type: string;
         background: any;
         fog: Fog | FogExp2;
-        overridematerial: Material;
+        overrideMaterial: Material;
         autoUpdate: boolean;
 
         ["constructor"]: typeof Scene;
