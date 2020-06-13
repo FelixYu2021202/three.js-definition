@@ -563,7 +563,10 @@ declare module THREE {
 
     export class Mesh extends Object3D {
 
-        constructor(geometry: Geometry, material: Material);
+        constructor(geometry: Geometry | BufferGeometry, material: Material);
+
+        geometry: Geometry | BufferGeometry;
+        material: Material;
 
         drawMode: number;
 
