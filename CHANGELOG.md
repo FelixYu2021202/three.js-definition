@@ -98,3 +98,6 @@
 * 0.3.3 #31 2020 Jun 14:
     1. Fixed bug in THREE.Mesh  
     2. Updated CHANGELOG.md  
+
+* 0.3.6 #32 2020 Jun 15:
+    1. Changed all the "var ...: {..}" into "module ... {...}"  

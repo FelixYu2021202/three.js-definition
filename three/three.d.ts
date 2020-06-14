@@ -120,118 +120,210 @@ declare module THREE {
 
     }
 
-    export var ShaderLib: {
+    export module ShaderLib {
 
-        basic: __internal.Shader.shader,
-        lambert: __internal.Shader.shader,
-        phong: __internal.Shader.shader,
-        standard: __internal.Shader.shader,
-        points: __internal.Shader.shader,
-        dashed: __internal.Shader.shader,
-        depth: __internal.Shader.shader,
-        normal: __internal.Shader.shader,
-        sprite: __internal.Shader.shader,
-        cube: __internal.Shader.shader,
-        equirect: __internal.Shader.shader,
-        distanceRGBA: __internal.Shader.shader,
-        shadow: __internal.Shader.shader,
-        phisical: __internal.Shader.shader,
+        export var basic: __internal.Shader.shader;
+        export var lambert: __internal.Shader.shader;
+        export var phong: __internal.Shader.shader;
+        export var standard: __internal.Shader.shader;
+        export var points: __internal.Shader.shader;
+        export var dashed: __internal.Shader.shader;
+        export var depth: __internal.Shader.shader;
+        export var normal: __internal.Shader.shader;
+        export var sprite: __internal.Shader.shader;
+        export var cube: __internal.Shader.shader;
+        export var equirect: __internal.Shader.shader;
+        export var distanceRGBA: __internal.Shader.shader;
+        export var shadow: __internal.Shader.shader;
+        export var phisical: __internal.Shader.shader;
 
     }
 
-    export var UniformsLib: {
+    export module UniformsLib {
 
-        common: {
+        export module common {
 
-            diffuse: { value: Color },
-            opacity: { value: number },
-            map: { value: any },
-            uvTransform: { value: Matrix3 },
-            alphaMap: { value: any }
+            export module diffuse {
+                export var value: Color;
+            }
+            export module opacity {
+                export var value: number;
+            }
+            export module map {
+                export var value: Texture;
+            }
+            export module uvTransform {
+                export var value: Matrix3;
+            }
+            export module alphaMap {
+                export var value: Texture;
+            }
 
-        },
+        }
 
-        specularmap: { specularMap: { value: any } },
+        export module specularmap { 
 
-        envmap: {
+            export module specularMap {
+                export var value: Texture;
+            }
 
-            envMap: { value: any },
-            flipEnvMap: { value: number },
-            reflectivity: { value: number }
-            refractionRatio: { value: number },
-            maxMipLevel: { value: number }
+        }
 
-        },
+        export module envmap {
 
-        aomap: {
+            export module envMap {
+                export var value: Texture;
+            }
+            export module flipEnvMap {
+                export var value: number;
+            }
+            export module reflectivity {
+                export var value: number;
+            }
+            export module refractionRatio {
+                export var value: number;
+            }
+            export module maxMipLevel {
+                export var value: number;
+            }
 
-            aoMap: { value: any },
-            aoMapIntensity: { value: number }
+        }
 
-        },
+        export module aomap {
 
-        lightmap: {
+            export module aoMap {
+                export var value: Texture;
+            }
+            export module aoMapIntensity {
+                export var value: number;
+            }
 
-            lightMap: { value: any },
-            lightMapIntensity: { value: number }
+        }
 
-        },
+        export module lightmap {
 
-        emissivemap: { emissiveMap: { value: any } },
+            export module lightMap {
+                export var value: Texture;
+            }
+            export module lightMapIntensity {
+                export var value: number;
+            }
 
-        bumpmap: {
+        }
 
-            bumpmap: { value: any },
-            bumpScale: { value: Vector2 }
+        export module emissivemap {
 
-        },
+            export module emissiveMap {
+                export var value: Texture;
+            }
 
-        normalmap: {
+        }
 
-            normalMap: { value: any },
-            normalScale: { value: Vector2 }
+        export module bumpmap {
 
-        },
+            export module bumpmap {
+                export var value: Texture;
+            }
+            export module bumpScale {
+                export var value: Vector2;
+            }
 
-        displacementmap: {
+        }
 
-            displacementMap: { value: any },
-            displacementScale: { value: number },
-            displacementBias: { value: number }
+        export module normalmap {
 
-        },
+            export module normalMap {
+                export var value: Texture
+            }
+            export module normalScale {
+                export var value: Vector2
+            }
 
-        roughnessmap: { roughnessMap: { value: any } },
+        }
 
-        metalnessmap: { metalnessMap: { value: any } },
+        export module displacementmap {
 
-        gradientmap: { gradientMap: { value: any } },
+            export module displacementMap {
+                export var value: Texture;
+            }
+            export module displacementScale {
+                export var value: number;
+            }
+            export module displacementBias {
+                export var value: number;
+            }
 
-        fog: {
+        }
 
-            fogDensity: { value: number },
-            fogNear: { value: number },
-            forFar: { value: number },
-            forColor: { value: Color },
+        export module roughnessmap {
 
-        },
+            export module roughnessMap {
+                export var value: Texture;
+            }
 
-        lights: {
+        }
 
-            ambientLightColor: { value: Array<any> },
-            directionalLights: {
-                value: Array<any>, properties: __internal.UniformsLib.light & {
+        export module metalnessmap {
+
+            export module metalnessMap {
+                export var value: Texture;
+            }
+
+        }
+
+        export module gradientmap {
+
+            export module gradientMap {
+                export var value: Texture;
+            }
+
+        }
+
+        export module fog {
+
+            export module fogDensity {
+                export var value: number;
+            }
+            export module fogNear {
+                export var value: number;
+            }
+            export module fogFar {
+                export var value: number;
+            }
+            export module fogColor {
+                export var value: Color;
+            }
+
+        }
+
+        export module lights {
+
+            export module ambientLightColor {
+                export var value: Array<Color>;
+            }
+
+            export module directionalLights {
+
+                export var value: Array<DirectionalLight>;
+                export var properties: __internal.UniformsLib.light & {
 
                     direction: { },
 
                 }
-            },
 
-            directionalShadowMap: { value: Array<any> },
-            directionalShadowMatrix: { value: Array<any> },
+            }
 
-            spotLights: {
-                value: Array<any>, properties: __internal.UniformsLib.light & {
+            export module directionalShadowMap {
+                export var value: Array<Texture>;
+            }
+            export module directionalShadowMatrix {
+                export var value: Array<Matrix4>;
+            }
+
+            export module spotLights {
+
+                export var value: Array<SpotLight>;
+                export var properties: __internal.UniformsLib.light & {
 
                     position: { },
                     direction: { },
@@ -241,195 +333,236 @@ declare module THREE {
                     decay: { }
 
                 }
-            },
 
-            spotShadowMap: { value: Array<any> },
-            spotShadowMatrix: { value: Array<any> },
+            }
 
-            pointLights: {
-                value: Array<any>, properties: {
+            export module spotShadowMap {
+                export var value: Array<Texture>;
+            }
+            export module spotShadowMatrix {
+                export var value: Array<Matrix4>;
+            }
 
-                    position: { },
-                    decay: { },
-                    distance: { }
+            export module pointLights {
 
-                }
-            },
+                export var value: Array<PointLight>;
+                export module properties {
 
-            pointShadowMap: { value: Array<any> },
-            pointShadowMatrix: { value: Array<any> },
-
-            hemisphereLights: {
-                value: Array<any>, properties: {
-
-                    direction: { },
-                    skyColor: { },
-                    groundColor: { }
+                    export module position { }
+                    export module decay { }
+                    export module distance { }
 
                 }
-            },
 
-            rectAreaLights: {
-                value: Array<any>, properties: {
+            }
 
-                    color: { },
-                    position: { },
-                    width: { },
-                    height: { }
+            export module pointShadowMap {
+                export var value: Array<Texture>;
+            }
+            export module pointShadowMatrix {
+                export var value: Array<Matrix4>;
+            }
+
+            export module hemisphereLights {
+
+                export var value: Array<HemisphereLight>;
+                export module properties {
+
+                    export module direction { }
+                    export module skyColor { }
+                    export module groundColor { }
+
+                }
+
+            }
+
+            export module rectAreaLights {
+
+                export var value: Array<RectAreaLight>;
+                export module properties {
+
+                    export module color { }
+                    export module position { }
+                    export module width { }
+                    export module height { }
 
                 }
             }
 
-        },
+        }
 
-        points: {
+        export module points {
 
-            diffuse: { value: Color },
-            opacity: { value: number },
-            size: { value: number },
-            scale: { value: number },
-            map: { value: any },
-            uvTransform: { value: Matrix3 }
+            export module diffuse {
+                export var value: Color;
+            }
+            export module opacity {
+                export var value: number;
+            }
+            export module size {
+                export var value: number;
+            }
+            export module scale {
+                export var value: number;
+            }
+            export module map {
+                export var value: Texture;
+            }
+            export module uvTransform {
+                export var value: Matrix3;
+            }
 
-        },
+        }
 
-        sprite: {
+        export module sprite {
 
-            diffuse: { value: Color },
-            opacity: { value: number },
-            center: { value: Vector2 },
-            rotation: { value: number },
-            map: { value: any },
-            uvTransform: { value: Matrix3 }
+            export module diffuse {
+                export var value: Color;
+            }
+            export module opacity {
+                export var value: number;
+            }
+            export module center {
+                export var value: Vector2;
+            }
+            export module rotation {
+                export var value: number;
+            }
+            export module map {
+                export var value: Texture;
+            }
+            export module uvTransform {
+                export var value: Matrix3;
+            }
 
         }
 
     }
 
-    export var UniformsUtils: {
+    export module UniformsUtils {
 
-        merge(uniforms: Array<{ }>): { },
-        clone(uniforms_src: { }): { }
+        export function merge(uniforms: Array<{ }>): { };
+        export function clone(uniforms_src: { }): { };
 
     }
 
-    export var ShaderChunk: {
+    export module ShaderChunk {
 
-        alphamap_fragment: string,
-        alphamap_pars_fragment: string,
-        alphatest_fragment: string,
-        aomap_fragment: string,
-        aomap_pars_fragment: string,
-        begin_vertex: string,
-        beginnormal_vertex: string,
-        bsdfs: string,
-        bumpmap_pars_fragment: string,
-        clipping_planes_fragment: string,
-        clipping_planes_pars_fragment: string,
-        clipping_planes_pars_vertex: string,
-        clipping_planes_vertex: string,
-        color_fragment: string,
-        color_pars_fragment: string,
-        color_pars_vertex: string,
-        color_vertex: string,
-        common: string,
-        cube_uv_reflection_fragment: string,
-        defaultnormal_vertex: string,
-        displacementmap_pars_vertex: string,
-        displacementmap_vertex: string,
-        emissivemap_fragment: string,
-        emissivemap_pars_fragment: string,
-        encodings_fragment: string,
-        encodings_pars_fragment: string,
-        envmap_fragment: string,
-        envmap_pars_fragment: string,
-        envmap_pars_vertex: string,
-        envmap_physical_pars_fragment: string,
-        envmap_vertex: string,
-        fog_vertex: string,
-        fog_pars_vertex: string,
-        fog_fragment: string,
-        fog_pars_fragment: string,
-        gradientmap_pars_fragment: string,
-        lightmap_fragment: string,
-        lightmap_pars_fragment: string,
-        lights_lambert_vertex: string,
-        lights_pars_begin: string,
-        lights_phong_fragment: string,
-        lights_phong_pars_fragment: string,
-        lights_physical_fragment: string,
-        lights_physical_pars_fragment: string,
-        lights_fragment_begin: string,
-        lights_fragment_maps: string,
-        lights_fragment_end: string,
-        logdepthbuf_fragment: string,
-        logdepthbuf_pars_fragment: string,
-        logdepthbuf_pars_vertex: string,
-        logdepthbuf_vertex: string,
-        map_fragment: string,
-        map_pars_fragment: string,
-        map_particle_fragment: string,
-        map_particle_pars_fragment: string,
-        metalnessmap_fragment: string,
-        metalnessmap_pars_fragment: string,
-        morphnormal_vertex: string,
-        morphtarget_pars_vertex: string,
-        morphtarget_vertex: string,
-        normal_fragment_begin: string,
-        normal_fragment_maps: string,
-        normalmap_pars_fragment: string,
-        packing: string,
-        premultiplied_alpha_fragment: string,
-        project_vertex: string,
-        dithering_fragment: string,
-        dithering_pars_fragment: string,
-        roughnessmap_fragment: string,
-        roughnessmap_pars_fragment: string,
-        shadowmap_pars_fragment: string,
-        shadowmap_pars_vertex: string,
-        shadowmap_vertex: string,
-        shadowmask_pars_fragment: string,
-        skinbase_vertex: string,
-        skinning_pars_vertex: string,
-        skinning_vertex: string,
-        skinnormal_vertex: string,
-        specularmap_fragment: string,
-        specularmap_pars_fragment: string,
-        tonemapping_fragment: string,
-        tonemapping_pars_fragment: string,
-        uv_pars_fragment: string,
-        uv_pars_vertex: string,
-        uv_vertex: string,
-        uv2_pars_fragment: string,
-        uv2_pars_vertex: string,
-        uv2_vertex: string,
-        worldpos_vertex: string,
-        cube_frag: string,
-        cube_vert: string,
-        depth_frag: string,
-        depth_vert: string,
-        distanceRGBA_frag: string,
-        distanceRGBA_vert: string,
-        equirect_frag: string,
-        equirect_vert: string,
-        linedashed_frag: string,
-        linedashed_vert: string,
-        meshbasic_frag: string,
-        meshbasic_vert: string,
-        meshlambert_frag: string,
-        meshlambert_vert: string,
-        meshphong_frag: string,
-        meshphong_vert: string,
-        meshphysical_frag: string,
-        meshphysical_vert: string,
-        normal_frag: string,
-        normal_vert: string,
-        points_frag: string,
-        points_vert: string,
-        shadow_frag: string,
-        shadow_vert: string,
-        sprite_frag: string,
-        sprite_vert: string
+        export var alphamap_fragment: string;
+        export var alphamap_pars_fragment: string;
+        export var alphatest_fragment: string;
+        export var aomap_fragment: string;
+        export var aomap_pars_fragment: string;
+        export var begin_vertex: string;
+        export var beginnormal_vertex: string;
+        export var bsdfs: string;
+        export var bumpmap_pars_fragment: string;
+        export var clipping_planes_fragment: string;
+        export var clipping_planes_pars_fragment: string;
+        export var clipping_planes_pars_vertex: string;
+        export var clipping_planes_vertex: string;
+        export var color_fragment: string;
+        export var color_pars_fragment: string;
+        export var color_pars_vertex: string;
+        export var color_vertex: string;
+        export var common: string;
+        export var cube_uv_reflection_fragment: string;
+        export var defaultnormal_vertex: string;
+        export var displacementmap_pars_vertex: string;
+        export var displacementmap_vertex: string;
+        export var emissivemap_fragment: string;
+        export var emissivemap_pars_fragment: string;
+        export var encodings_fragment: string;
+        export var encodings_pars_fragment: string;
+        export var envmap_fragment: string;
+        export var envmap_pars_fragment: string;
+        export var envmap_pars_vertex: string;
+        export var envmap_physical_pars_fragment: string;
+        export var envmap_vertex: string;
+        export var fog_vertex: string;
+        export var fog_pars_vertex: string;
+        export var fog_fragment: string;
+        export var fog_pars_fragment: string;
+        export var gradientmap_pars_fragment: string;
+        export var lightmap_fragment: string;
+        export var lightmap_pars_fragment: string;
+        export var lights_lambert_vertex: string;
+        export var lights_pars_begin: string;
+        export var lights_phong_fragment: string;
+        export var lights_phong_pars_fragment: string;
+        export var lights_physical_fragment: string;
+        export var lights_physical_pars_fragment: string;
+        export var lights_fragment_begin: string;
+        export var lights_fragment_maps: string;
+        export var lights_fragment_end: string;
+        export var logdepthbuf_fragment: string;
+        export var logdepthbuf_pars_fragment: string;
+        export var logdepthbuf_pars_vertex: string;
+        export var logdepthbuf_vertex: string;
+        export var map_fragment: string;
+        export var map_pars_fragment: string;
+        export var map_particle_fragment: string;
+        export var map_particle_pars_fragment: string;
+        export var metalnessmap_fragment: string;
+        export var metalnessmap_pars_fragment: string;
+        export var morphnormal_vertex: string;
+        export var morphtarget_pars_vertex: string;
+        export var morphtarget_vertex: string;
+        export var normal_fragment_begin: string;
+        export var normal_fragment_maps: string;
+        export var normalmap_pars_fragment: string;
+        export var packing: string;
+        export var premultiplied_alpha_fragment: string;
+        export var project_vertex: string;
+        export var dithering_fragment: string;
+        export var dithering_pars_fragment: string;
+        export var roughnessmap_fragment: string;
+        export var roughnessmap_pars_fragment: string;
+        export var shadowmap_pars_fragment: string;
+        export var shadowmap_pars_vertex: string;
+        export var shadowmap_vertex: string;
+        export var shadowmask_pars_fragment: string;
+        export var skinbase_vertex: string;
+        export var skinning_pars_vertex: string;
+        export var skinning_vertex: string;
+        export var skinnormal_vertex: string;
+        export var specularmap_fragment: string;
+        export var specularmap_pars_fragment: string;
+        export var tonemapping_fragment: string;
+        export var tonemapping_pars_fragment: string;
+        export var uv_pars_fragment: string;
+        export var uv_pars_vertex: string;
+        export var uv_vertex: string;
+        export var uv2_pars_fragment: string;
+        export var uv2_pars_vertex: string;
+        export var uv2_vertex: string;
+        export var worldpos_vertex: string;
+        export var cube_frag: string;
+        export var cube_vert: string;
+        export var depth_frag: string;
+        export var depth_vert: string;
+        export var distanceRGBA_frag: string;
+        export var distanceRGBA_vert: string;
+        export var equirect_frag: string;
+        export var equirect_vert: string;
+        export var linedashed_frag: string;
+        export var linedashed_vert: string;
+        export var meshbasic_frag: string;
+        export var meshbasic_vert: string;
+        export var meshlambert_frag: string;
+        export var meshlambert_vert: string;
+        export var meshphong_frag: string;
+        export var meshphong_vert: string;
+        export var meshphysical_frag: string;
+        export var meshphysical_vert: string;
+        export var normal_frag: string;
+        export var normal_vert: string;
+        export var points_frag: string;
+        export var points_vert: string;
+        export var shadow_frag: string;
+        export var shadow_vert: string;
+        export var sprite_frag: string;
+        export var sprite_vert: string;
 
     }
 
@@ -1005,24 +1138,24 @@ declare module THREE {
 
     }
 
-    export var LoaderUtils: {
+    export module LoaderUtils {
 
-        decodeText(array: BufferSource): string,
-        extractUrlBase(url: string): string
+        export function decodeText(array: BufferSource): string;
+        export function extractUrlBase(url: string): string;
 
     }
 
-    export var Cache: {
+    export module Cache {
 
-        enabled: boolean,
-        files: {
+        export var enabled: boolean;
+        export var files: {
             [key: string]: string
-        },
+        }
 
-        add(key: string, file: string): void;
-        get(key: string): string;
-        remove(key: string): void;
-        clear: VoidFunction;
+        export function add(key: string, file: string): void;
+        export function get(key: string): string;
+        export function remove(key: string): void;
+        export var clear: VoidFunction;
 
     }
 
@@ -1272,7 +1405,7 @@ declare module THREE {
         ["constructor"]: typeof Object3D & typeof Camera;
         isCamera: true;
         copy(source: Object3D & Camera, recursive: boolean): Object3D & Camera;
-        getWorldDirection(target: Vector3): Quaternion;
+        getWorldDirection(target: Vector3): Vector3;
         updateMatrixWorld(force: boolean): void;
         clone(): Object3D & Camera;
 
@@ -1540,14 +1673,14 @@ declare module THREE {
 
     }
 
-    export var AnimationUtils: {
+    export module AnimationUtils {
 
-        arraySlice(array: Array<any>, from: number, to: number): Array<any>,
-        convertArray(array: Array<any>, type: any, forceClone: boolean): Array<any>,
-        isTypedArray(object: Array<any>): boolean,
-        getKeyframeOrder(time: number): Array<any>,
-        sortedArray(values: Array<any>, stride: number, order: Array<any>): Array<any>,
-        flattenJSON(jsonKeys: Array<any>, time: Array<number>, values: Array<any>, valuePropertyName: string): void
+        export function arraySlice(array: Array<any>, from: number, to: number): Array<any>;
+        export function convertArray(array: Array<any>, type: any, forceClone: boolean): Array<any>;
+        export function isTypedArray(object: Array<any>): boolean;
+        export function getKeyframeOrder(time: number): Array<any>;
+        export function sortedArray(values: Array<any>, stride: number, order: Array<any>): Array<any>;
+        export function flattenJSON(jsonKeys: Array<any>, time: Array<number>, values: Array<any>, valuePropertyName: string): void;
 
     }
 
@@ -1944,7 +2077,7 @@ declare module THREE {
         getWorldPosition(target: Vector3): Vector3;
         getWorldQuaternion(target: Quaternion): Quaternion;
         getWorldScale(target: Vector3): Vector3;
-        getWorldDirection(target: Quaternion): Quaternion;
+        getWorldDirection(target: Vector3): Vector3;
         traverse(callback: __internal.Object3D.traverseFn): void;
         traverseVisible(callback: __internal.Object3D.traverseFn): void;
         traverseAncestors(callback: __internal.Object3D.traverseFn): void;
@@ -2117,26 +2250,26 @@ declare module THREE {
 
     }
 
-    export var Math: {
+    export module Math {
 
-        DEG2RAD: number,
-        RAD2DEG: number,
+        export var DEG2RAD: number;
+        export var RAD2DEG: number;
 
-        generateUUID(): string,
-        clamp(value: number, min: number, max: number): number,
-        euclideanModulo(n: number, m: number): number,
-        mapLinear(x: number, a1: number, a2: number, b1: number, b2: number): number,
-        lerp(x: number, y: number, t: number): number,
-        smoothstep(x: number, min: number, max: number): number,
-        smootherstep(x: number, min: number, max: number): number,
-        randInt(low: number, high: number): number,
-        randFloat(low: number, high: number): number,
-        randFloatSpread(range: number): number,
-        degToRad(degrees: number): number,
-        radToDeg(radians: number): number,
-        isPowerOfTwo(value: number): boolean,
-        ceilPowerOfTwo(value: number): number,
-        floorPowerOfTwo(value: number): number
+        export function generateUUID(): string;
+        export function clamp(value: number, min: number, max: number): number;
+        export function euclideanModulo(n: number, m: number): number;
+        export function mapLinear(x: number, a1: number, a2: number, b1: number, b2: number): number;
+        export function lerp(x: number, y: number, t: number): number;
+        export function smoothstep(x: number, min: number, max: number): number;
+        export function smootherstep(x: number, min: number, max: number): number;
+        export function randInt(low: number, high: number): number;
+        export function randFloat(low: number, high: number): number;
+        export function randFloatSpread(range: number): number;
+        export function degToRad(degrees: number): number;
+        export function radToDeg(radians: number): number;
+        export function isPowerOfTwo(value: number): boolean;
+        export function ceilPowerOfTwo(value: number): number;
+        export function floorPowerOfTwo(value: number): number;
 
     }
 
@@ -3124,27 +3257,21 @@ declare module THREE {
 
     }
     
-    export var ImageUtils: {
+    export module ImageUtils {
 
-        getDataUrl(image: HTMLCanvasElement | ImageData): string
-
-    }
-    
-    export var ShapeUtils: {
-
-        area(contour: Array<Vector2>): number;
-        isClockWise(pts: Array<Vector2>): boolean;
-        triangulateShape(contour: Array<Vector2>, holes: Array<Vector2>): any;
+        export function getDataUrl(image: HTMLCanvasElement | ImageData): string;
 
     }
 
-    export var WebGLUtils: {
+    export module ShapeUtils {
 
-        new (gl: WebGL2RenderingContext | WebGLRenderingContext, extensions: __internal.WebGLExtensions, capabilities: __internal.WebGLCapabilities): __internal.WebGLUtils,
-
-        (gl: WebGL2RenderingContext | WebGLRenderingContext, extensions: __internal.WebGLExtensions, capabilities: __internal.WebGLCapabilities): __internal.WebGLUtils
+        export function area(contour: Array<Vector2>): number;
+        export function isClockWise(pts: Array<Vector2>): boolean;
+        export function triangulateShape(contour: Array<Vector2>, holes: Array<Vector2>): any;
 
     }
+
+    export function WebGLUtils(gl: WebGL2RenderingContext | WebGLRenderingContext, extensions: __internal.WebGLExtensions, capabilities: __internal.WebGLCapabilities): __internal.WebGLUtils;
 
     export class WireframeGeometry extends BufferGeometry {
 
@@ -4705,13 +4832,13 @@ declare module THREE {
     }
 
     export var REVISION: string;
-    export var MOUSE: {
+    export module MOUSE {
 
-        LEFT: number,
-        MIDDLE: number,
-        RIGHT: number
+        export var LEFT: number;
+        export var MIDDLE: number;
+        export var RIGHT: number;
 
-    };
+    }
     export var CullFaceNone: number;
     export var CullFaceBack: number;
     export var CullFaceFront: number;
@@ -4917,10 +5044,10 @@ declare module THREE {
 
     export function BinaryTextureLoader(manager: LoadingManager): DataTextureLoader;
 
-    export var GeometryUtils: {
+    export module GeometryUtils {
 
-        merge(geometry1: Geometry, geometry2: Geometry, materialIndexOffset: number): void,
-        center(geometry): Geometry
+        export function merge(geometry1: Geometry, geometry2: Geometry, materialIndexOffset: number): void;
+        export function center(geometry): Geometry;
 
     }
 
@@ -4942,15 +5069,15 @@ declare module THREE {
 
     }
 
-    export var SceneUtils: {
+    export module SceneUtils {
 
-        createMultiMaterialObject: VoidFunction,
-        detach: VoidFunction,
-        attach: VoidFunction
+        export var createMultiMaterialObject: VoidFunction;
+        export var detach: VoidFunction;
+        export var attach: VoidFunction;
 
     }
 
-    export function LensFlare: VoidFunction;
+    export var LensFlare: VoidFunction;
 
     export var __esModule: true;
 
