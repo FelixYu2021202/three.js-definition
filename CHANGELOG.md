@@ -106,3 +106,7 @@
 
 * 0.3.7 #33 2020 Jun 15:  
     1. Updated CHANGELOG.md  
+
+* 0.3.9 #34 2020 Jun 15:  
+    1. Fixed "many" bug in defination of three.js  
+    2. Created defination of QuickHull.js  
