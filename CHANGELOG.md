@@ -95,9 +95,14 @@
     1. Updated CHANGELOG.md  
     2. Fixed bug in THREE.Scene  
 
-* 0.3.3 #31 2020 Jun 14:
+* 0.3.3 #31 2020 Jun 14:  
     1. Fixed bug in THREE.Mesh  
     2. Updated CHANGELOG.md  
 
-* 0.3.6 #32 2020 Jun 15:
+* 0.3.6 #32 2020 Jun 15:  
     1. Changed all the "var ...: {..}" into "module ... {...}"  
+    2. Created defination of ConvexGeometry.js  
+    3. Created defination of ParametricGeometries.js  
+
+* 0.3.7 #33 2020 Jun 15:  
+    1. Updated CHANGELOG.md  
