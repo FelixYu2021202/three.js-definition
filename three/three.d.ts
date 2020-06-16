@@ -122,7 +122,7 @@ declare module THREE {
         export var equirect: __internal.Shader.shader;
         export var distanceRGBA: __internal.Shader.shader;
         export var shadow: __internal.Shader.shader;
-        export var phisical: __internal.Shader.shader;
+        export var physical: __internal.Shader.shader;
 
     }
 
@@ -130,156 +130,96 @@ declare module THREE {
 
         export module common {
 
-            export module diffuse {
-                export var value: Color;
-            }
-            export module opacity {
-                export var value: number;
-            }
-            export module map {
-                export var value: Texture;
-            }
-            export module uvTransform {
-                export var value: Matrix3;
-            }
-            export module alphaMap {
-                export var value: Texture;
-            }
+            export var diffuse: __internal.Others.DescriptionMap<Color>;
+            export var opacity: __internal.Others.DescriptionMap<number>;
+            export var map: __internal.Others.DescriptionMap<Texture>;
+            export var uvTransform: __internal.Others.DescriptionMap<Matrix3>;
+            export var alphaMap: __internal.Others.DescriptionMap<Texture>;
 
         }
 
         export module specularmap { 
 
-            export module specularMap {
-                export var value: Texture;
-            }
+            export var specularMap: __internal.Others.DescriptionMap<Texture>;
 
         }
 
         export module envmap {
 
-            export module envMap {
-                export var value: Texture;
-            }
-            export module flipEnvMap {
-                export var value: number;
-            }
-            export module reflectivity {
-                export var value: number;
-            }
-            export module refractionRatio {
-                export var value: number;
-            }
-            export module maxMipLevel {
-                export var value: number;
-            }
+            export var envMap: __internal.Others.DescriptionMap<Texture>;
+            export var flipEnvMap: __internal.Others.DescriptionMap<Texture>;
+            export var reflectivity: __internal.Others.DescriptionMap<number>;
+            export var refractionRatio: __internal.Others.DescriptionMap<number>;
+            export var maxMipLevel: __internal.Others.DescriptionMap<number>;
 
         }
 
         export module aomap {
 
-            export module aoMap {
-                export var value: Texture;
-            }
-            export module aoMapIntensity {
-                export var value: number;
-            }
+            export var aoMap: __internal.Others.DescriptionMap<Texture>;
+            export var aoMapIntensity: __internal.Others.DescriptionMap<number>;
 
         }
 
         export module lightmap {
 
-            export module lightMap {
-                export var value: Texture;
-            }
-            export module lightMapIntensity {
-                export var value: number;
-            }
+            export var lightMap: __internal.Others.DescriptionMap<Texture>;
+            export var lightMapIntensity: __internal.Others.DescriptionMap<number>;
 
         }
 
         export module emissivemap {
 
-            export module emissiveMap {
-                export var value: Texture;
-            }
+            export var emissiveMap: __internal.Others.DescriptionMap<Texture>;
 
         }
 
         export module bumpmap {
 
-            export module bumpmap {
-                export var value: Texture;
-            }
-            export module bumpScale {
-                export var value: Vector2;
-            }
+            export var bumpmap: __internal.Others.DescriptionMap<Texture>;
+            export var bumpScale: __internal.Others.DescriptionMap<Vector2>;
 
         }
 
         export module normalmap {
 
-            export module normalMap {
-                export var value: Texture
-            }
-            export module normalScale {
-                export var value: Vector2
-            }
+            export var normalMap: __internal.Others.DescriptionMap<Texture>;
+            export var normalScale: __internal.Others.DescriptionMap<Vector2>;
 
         }
 
         export module displacementmap {
 
-            export module displacementMap {
-                export var value: Texture;
-            }
-            export module displacementScale {
-                export var value: number;
-            }
-            export module displacementBias {
-                export var value: number;
-            }
+            export var displacementMap: __internal.Others.DescriptionMap<Texture>;
+            export var displacementScale: __internal.Others.DescriptionMap<number>;
+            export var displacementBias: __internal.Others.DescriptionMap<number>;
 
         }
 
         export module roughnessmap {
 
-            export module roughnessMap {
-                export var value: Texture;
-            }
+            export var roughnessMap: __internal.Others.DescriptionMap<Texture>;
 
         }
 
         export module metalnessmap {
 
-            export module metalnessMap {
-                export var value: Texture;
-            }
+            export var metalnessMap: __internal.Others.DescriptionMap<Texture>;
 
         }
 
         export module gradientmap {
 
-            export module gradientMap {
-                export var value: Texture;
-            }
+            export var gradientMap: __internal.Others.DescriptionMap<Texture>;
 
         }
 
         export module fog {
 
-            export module fogDensity {
-                export var value: number;
-            }
-            export module fogNear {
-                export var value: number;
-            }
-            export module fogFar {
-                export var value: number;
-            }
-            export module fogColor {
-                export var value: Color;
-            }
+            export var fogDensity: __internal.Others.DescriptionMap<number>;
+            export var fogNear: __internal.Others.DescriptionMap<number>;
+            export var fogFar: __internal.Others.DescriptionMap<number>;
+            export var fogColor: __internal.Others.DescriptionMap<Color>;
 
         }
 
@@ -380,47 +320,23 @@ declare module THREE {
 
         export module points {
 
-            export module diffuse {
-                export var value: Color;
-            }
-            export module opacity {
-                export var value: number;
-            }
-            export module size {
-                export var value: number;
-            }
-            export module scale {
-                export var value: number;
-            }
-            export module map {
-                export var value: Texture;
-            }
-            export module uvTransform {
-                export var value: Matrix3;
-            }
+            export var diffuse: __internal.Others.DescriptionMap<Color>;
+            export var opacity: __internal.Others.DescriptionMap<number>;
+            export var size: __internal.Others.DescriptionMap<number>;
+            export var scale: __internal.Others.DescriptionMap<number>;
+            export var map: __internal.Others.DescriptionMap<Texture>;
+            export var uvTransform: __internal.Others.DescriptionMap<Matrix3>;
 
         }
 
         export module sprite {
 
-            export module diffuse {
-                export var value: Color;
-            }
-            export module opacity {
-                export var value: number;
-            }
-            export module center {
-                export var value: Vector2;
-            }
-            export module rotation {
-                export var value: number;
-            }
-            export module map {
-                export var value: Texture;
-            }
-            export module uvTransform {
-                export var value: Matrix3;
-            }
+            export var diffuse: __internal.Others.DescriptionMap<Color>;
+            export var opacity: __internal.Others.DescriptionMap<number>;
+            export var center: __internal.Others.DescriptionMap<Vector2>;
+            export var rotation: __internal.Others.DescriptionMap<number>;
+            export var map: __internal.Others.DescriptionMap<Texture>;
+            export var uvTransform: __internal.Others.DescriptionMap<Matrix3>;
 
         }
 
@@ -976,8 +892,8 @@ declare module THREE {
         parseGeometries(json: { }, shapes: Shape): Geometry;
         parseMaterials(json: { }, textures: Texture): Material;
         parseAnimations(json: Array<{ }>): Array<AnimationClip>;
-        parseImages(json: { }, onLoad: __internal.Loader._onLoad<{ [uuid: string]: any }>): __internal.Others.Image;
-        parseTextures(json: { }, images: { [uuid: string]: any }): Texture;
+        parseImages(json: { }, onLoad: __internal.Loader._onLoad<any>): __internal.Others.Image;
+        parseTextures(json: { }, images: { [uuid: string]: __internal.BufferAttribute.typedArray }): Texture;
         parseObject(data: any, geometries: Geometry, material: Material): Object3D;
 
     }
@@ -4050,7 +3966,7 @@ declare module THREE {
 
         type: string;
         defines: { [name: string]: string };
-        uniforms: { [name: string]: { value: number } };
+        uniforms: { [name: string]: __internal.Others.DescriptionMap<number>; };
         vertexShader: string;
         fragmentShader: string;
         linewidth: number;
@@ -5392,7 +5308,7 @@ declare module THREE {
             export interface MaterialParameter {
 
                 defines: { [name: string]: string },
-                uniforms: { [name: string]: { value: number } },
+                uniforms: { [name: string]: __internal.Others.DescriptionMap<number>; },
                 fragmentShader: string,
                 vertexShader: string,
                 wireframe: boolean,
@@ -5664,6 +5580,12 @@ declare module THREE {
                 init: VoidFunction,
                 push(object: Object3D, geometry: Geometry, material: Material, z: number, group: Group): void,
                 sort: VoidFunction
+
+            }
+
+            export interface DescriptionMap<T> {
+
+                value: T
 
             }
 
