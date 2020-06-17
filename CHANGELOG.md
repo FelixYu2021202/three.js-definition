@@ -114,3 +114,7 @@
 * 0.3.11 #35 2020 Jun 16:  
     1. Change some grammar in definations  
     2. Created defination of RectAreaLightUniformsLibs.js  
+
+* 0.3.12 #36 2020 Jun 17:  
+    1. Updated some definations.  
+    2. Created defination of ctm.js(not finished)  

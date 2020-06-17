@@ -31,7 +31,7 @@ declare module THREE {
 
     }
 
-    export module __internal {
+    module __internal {
 
         export module QuickHull {
 
