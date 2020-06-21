@@ -127,3 +127,6 @@
 
 * 0.3.15 #38 2020 Jun 21:
     1. Updated README.md  
+
+* 0.3.16 #39 2020 Jun 22:  
+    1. Deleted the view using this extension  
