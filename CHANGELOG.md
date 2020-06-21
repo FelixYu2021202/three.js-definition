@@ -5,13 +5,14 @@
     1. Uploaded the base defination of three.js  
 
 * 0.1.2 #2 2020 Jun 5:  
-    1. Created the defination of utils/Stats.js  
+    1. Created defination of utils/Stats.js  
 
 * 0.1.3 #3 2020 Jun 5:  
     1. Created defination of DeviceOrientationControls.js  
 
 * 0.1.6 #4 2020 Jun 6:  
-    1. Updated defination and README  
+    1. Updated some definations  
+    2. Updated README  
 
 * 0.1.7 #5 2020 Jun 6:  
     1. Updated README.md  
@@ -53,7 +54,8 @@
     1. Updated README.md  
 
 * 0.2.11 #18 2020 Jun 7:  
-    1. Created & Update defination of some controls  
+    1. Created defination of some controls  
+    2. Update defination of some controls  
 
 * 0.2.13 #19 2020 Jun 8:  
     1. Fixed bug in THREE.WebGLRenderer  
@@ -128,8 +130,11 @@
 * 0.3.15 #38 2020 Jun 21:
     1. Updated README.md  
 
-* 0.3.16 #39 2020 Jun 22:  
+* 0.3.16 #39 2020 Jun 21:  
     1. Deleted the view using this extension  
 
-* 0.3.18 #40 2020 Jun 23:  
+* 0.3.18 #40 2020 Jun 21:  
     1. Created full defination of CTM loaders.  
+
+* 0.4.0 #41 2020 Jun 21:  
+    1. Updated CHANGELOG.md  
