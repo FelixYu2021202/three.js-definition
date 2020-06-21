@@ -124,3 +124,6 @@
     1. Created defination of ctm.js  
     2. Updated README.md  
     3. Updated CHANGELOG.md  
+
+* 0.3.15 #38 2020 Jun 21:
+    1. Updated README.md  

@@ -7,7 +7,6 @@ If you want to use this extension, write the code below in the first line of you
 `///<reference path="file root/three.js-defination/lib root/lib name.d.ts"/>`  
 tip: "file root", "lib root", and "lib name" is the real roots and names, *not* the real thing! ***Don't say if you really write "file root/three.js-defination/lib root/lib name.d.ts"!***  
 warning: Every object "__internal" is not in the real object, it's for definings and typings ***only***.  
-But when you write it in your javascript, you'll notice that it is *not* original comment, the words "reference", "path", and the string is highlighted! Do *not* worry because it's only the "VSCode 'defination' keyword", it won't have *any* effect in browsers.
 
 ***~Enjoy!*** -->
 
@@ -21,7 +20,6 @@ Three.js是一个很好的帮助使用WebGL的LIB，但是在你写JS代码时�
 ///<reference path="文件路径/three.js-defination/LIB路径/LIB名.d.ts"/>
 ```  
 警告：每一个变量“__internal”都不在真正的模块里，它**只**是为了*定义和确定类型*。  
-但是当你写完那行代码时，你会发现它不是一个普通的注释，单词“reference”、“path”和文件路径都被突出了！*不要*担心，因为那只是“VSCode‘定义’关键字”，在浏览器里面它不会有*任何*效果。
 
 ***~享受吧！***
 
