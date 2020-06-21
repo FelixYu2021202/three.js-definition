@@ -130,3 +130,6 @@
 
 * 0.3.16 #39 2020 Jun 22:  
     1. Deleted the view using this extension  
+
+* 0.3.18 #40 2020 Jun 23:  
+    1. Created full defination of CTM loaders.  
