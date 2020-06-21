@@ -9,10 +9,6 @@ tip: "file root", "lib root", and "lib name" is the real roots and names, *not* 
 warning: Every object "__internal" is not in the real object, it's for definings and typings ***only***.  
 But when you write it in your javascript, you'll notice that it is *not* original comment, the words "reference", "path", and the string is highlighted! Do *not* worry because it's only the "VSCode 'defination' keyword", it won't have *any* effect in browsers.
 
-So, if you more like Typescript, you can even use it!
-
-If there's ***any*** problems with the defination, please update first, if the problem is *not* fixed, then ask it *clearly* from the github issue, like "There's member XXX in class XXX that typed string."(Please try to tell the type unless you don't know).
-
 ***~Enjoy!*** -->
 
 # Three Defination <!-- \# zh -->
@@ -21,13 +17,11 @@ Three.js是一个很好的帮助使用WebGL的LIB，但是在你写JS代码时�
 
 ## 怎么用？
 如果你想用这个扩展库，写下面的一行代码在你的JS的第一行：  
-`///<reference path="文件路径/three.js-defination/LIB路径/LIB名.d.ts"/>`  
+```javascript
+///<reference path="文件路径/three.js-defination/LIB路径/LIB名.d.ts"/>
+```  
 警告：每一个变量“__internal”都不在真正的模块里，它**只**是为了*定义和确定类型*。  
 但是当你写完那行代码时，你会发现它不是一个普通的注释，单词“reference”、“path”和文件路径都被突出了！*不要*担心，因为那只是“VSCode‘定义’关键字”，在浏览器里面它不会有*任何*效果。
-
-现在，如果你更喜欢Typescript，那么就用就行了！
-
-如果定义脚本有问题，那么就更新这个插件看看问题有没有解决，如果问题还没解决，那就在GitHub上的Issue上把问题告诉得*尽量清楚*，像“类XXX有成员XXX，它的类型是string。”（请尽量告诉类型，除非你不知道）
 
 ***~享受吧！***
 

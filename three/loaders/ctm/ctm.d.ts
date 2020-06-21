@@ -52,6 +52,48 @@ declare module CTM {
 
     }
 
+    export class FileMG2Header {
+
+        constructor(stream: Stream);
+        vertexPrecision: number;
+        normalPrecision: number;
+        lowerBoundx: number;
+        lowerBoundy: number;
+        lowerBoundz: number;
+        higherBoundx: number;
+        higherBoundy: number;
+        higherBoundz: number;
+        divx: number;
+        divy: number;
+        divz: number;
+        sizex: number;
+        sizey: number;
+        sizez: number;
+
+    }
+
+    export class ReaderRAW {
+
+        read(stream: Stream, body: FileBody): void;
+        readIndices(stream: Stream, indices: Uint32Array): void;
+        readVertices(strean: Stream, vertices: Float32Array): void;
+        readNormals(stream: Stream, normals: Uint32Array): void;
+        readUVMaps(stream: Stream, uvMaps: Array<__internal.UVMap>): void;
+        readAttrMaps(stream: Stream, attrMaps: Array<__internal.AttrMap>): void;
+
+    }
+
+    export class ReaderMG1 {
+
+        read(stream: Stream, body: FileBody): void;
+        readIndices(stream: Stream, indices: Uint32Array): void;
+        readVertices(stream: Stream, vertices: Float32Array): void;
+        readNormals(stream: Stream, normals: Uint32Array): void;
+        readUVMaps(stream: Stream, uvMaps: Array<__internal.UVMap>): void;
+        readAttrMaps(stream: Stream, attrMaps: Array<__internal.AttrMap>): void;
+
+    }
+
     export class ReaderMG2 {
 
         MG2Header: FileMG2Header;
@@ -110,30 +152,6 @@ declare module CTM {
         readArrayFloat32(array: Float32Array): Float32Array;
 
     }
-
-    export class FileMG2Header {
-
-        constructor(stream: Stream);
-        vertexPrecision: number;
-        normalPrecision: number;
-        lowerBoundx: number;
-        lowerBoundy: number;
-        lowerBoundz: number;
-        higherBoundx: number;
-        higherBoundy: number;
-        higherBoundz: number;
-        divx: number;
-        divy: number;
-        divz: number;
-        sizex: number;
-        sizey: number;
-        sizez: number;
-
-    }
-
-    export class ReaderRAW { }
-
-    export class ReaderMG1 { }
 
     module __internal {
 

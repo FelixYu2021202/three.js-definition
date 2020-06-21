@@ -1,4 +1,5 @@
 # Three.js-defination Change Log
+
 ## 2020 June
 * 0.1.1 #1 2020 Jun 5:  
     1. Uploaded the base defination of three.js  
@@ -28,13 +29,13 @@
     1. Created defination of EditorControls.js  
 
 * 0.2.3 #10 2020 Jun 6:  
-    1. Created defination of three controls.  
+    1. Created defination of three controls  
 
 * 0.2.4 #11 2020 Jun 6:  
     1. Updated README.md  
 
 * 0.2.5 #12 2020 Jun 6:  
-    1. Created the view using this extension.  
+    1. Created the view using this extension  
 
 * 0.2.6 #13 2020 Jun 7:  
     1. Updated README.md  
@@ -58,7 +59,7 @@
     1. Fixed bug in THREE.WebGLRenderer  
 
 * 0.2.14 #20 2020 Jun 8: 
-    1.  Fixed bug in THREE.Mesh  
+    1. Fixed bug in THREE.Mesh  
 
 * 0.2.15 #21 2020 Jun 8:  
     1. Updated README.md  
@@ -83,7 +84,7 @@
     1. Fixed bug in THREE.Scene  
 
 * 0.2.23 #27 2020 Jun 12:  
-    1. Finished all the definations of the controls.  
+    1. Finished all the definations of the controls  
 
 * 0.3.0 #28 2020 Jun 12:  
     1. Updated CHANGELOG.md  
@@ -116,5 +117,10 @@
     2. Created defination of RectAreaLightUniformsLibs.js  
 
 * 0.3.12 #36 2020 Jun 17:  
-    1. Updated some definations.  
+    1. Updated some definations  
     2. Created defination of ctm.js(not finished)  
+
+* 0.3.14 #37 2020 Jun 21:  
+    1. Created defination of ctm.js  
+    2. Updated README.md  
+    3. Updated CHANGELOG.md  
