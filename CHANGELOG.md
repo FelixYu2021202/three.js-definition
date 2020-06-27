@@ -138,3 +138,6 @@
 
 * 0.4.0 #41 2020 Jun 21:  
     1. Updated CHANGELOG.md  
+
+* 0.5.0 #42 2020 Jun 26:  
+    1. Created defination of SEA3D.js(1500 lines!)  
