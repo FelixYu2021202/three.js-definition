@@ -1,17 +1,17 @@
-# Three.js-defination Change Log
+# Three.js-definition Change Log
 
 ## 2020 June
 * 0.1.1 #1 2020 Jun 5:  
-    1. Uploaded the base defination of three.js  
+    1. Uploaded the base definition of three.js  
 
 * 0.1.2 #2 2020 Jun 5:  
-    1. Created defination of utils/Stats.js  
+    1. Created definition of utils/Stats.js  
 
 * 0.1.3 #3 2020 Jun 5:  
-    1. Created defination of DeviceOrientationControls.js  
+    1. Created definition of DeviceOrientationControls.js  
 
 * 0.1.6 #4 2020 Jun 6:  
-    1. Updated some definations  
+    1. Updated some definitions  
     2. Updated README  
 
 * 0.1.7 #5 2020 Jun 6:  
@@ -24,13 +24,13 @@
     1. Updated CHANGELOG.md  
 
 * 0.2.0 #8 2020 Jun 6:  
-    1. Created defination of DragControls.js  
+    1. Created definition of DragControls.js  
 
 * 0.2.1 #9 2020 Jun 6:  
-    1. Created defination of EditorControls.js  
+    1. Created definition of EditorControls.js  
 
 * 0.2.3 #10 2020 Jun 6:  
-    1. Created defination of three controls  
+    1. Created definition of three controls  
 
 * 0.2.4 #11 2020 Jun 6:  
     1. Updated README.md  
@@ -54,8 +54,8 @@
     1. Updated README.md  
 
 * 0.2.11 #18 2020 Jun 7:  
-    1. Created defination of some controls  
-    2. Update defination of some controls  
+    1. Created definition of some controls  
+    2. Update definition of some controls  
 
 * 0.2.13 #19 2020 Jun 8:  
     1. Fixed bug in THREE.WebGLRenderer  
@@ -76,17 +76,17 @@
 
 * 0.2.19 #24 2020 Jun 10:  
     1. Fixed bug in LineBasicMaterial  
-    2. Created the defination of TransformControls.js(not finished)  
+    2. Created the definition of TransformControls.js(not finished)  
 
 * 0.2.21 #25 2020 Jun 11:  
-    1. Fixed bug in all definations  
-    2. Created the defination of TransformControls.js  
+    1. Fixed bug in all definitions  
+    2. Created the definition of TransformControls.js  
 
 * 0.2.22 #26 2020 Jun 11:  
     1. Fixed bug in THREE.Scene  
 
 * 0.2.23 #27 2020 Jun 12:  
-    1. Finished all the definations of the controls  
+    1. Finished all the definitions of the controls  
 
 * 0.3.0 #28 2020 Jun 12:  
     1. Updated CHANGELOG.md  
@@ -104,26 +104,26 @@
 
 * 0.3.6 #32 2020 Jun 15:  
     1. Changed all the "var ...: {..}" into "module ... {...}"  
-    2. Created defination of ConvexGeometry.js  
-    3. Created defination of ParametricGeometries.js  
+    2. Created definition of ConvexGeometry.js  
+    3. Created definition of ParametricGeometries.js  
 
 * 0.3.7 #33 2020 Jun 15:  
     1. Updated CHANGELOG.md  
 
 * 0.3.9 #34 2020 Jun 15:  
-    1. Fixed "many" bug in defination of three.js  
-    2. Created defination of QuickHull.js  
+    1. Fixed "many" bug in definition of three.js  
+    2. Created definition of QuickHull.js  
 
 * 0.3.11 #35 2020 Jun 16:  
-    1. Change some grammar in definations  
-    2. Created defination of RectAreaLightUniformsLibs.js  
+    1. Change some grammar in definitions  
+    2. Created definition of RectAreaLightUniformsLibs.js  
 
 * 0.3.12 #36 2020 Jun 17:  
-    1. Updated some definations  
-    2. Created defination of ctm.js(not finished)  
+    1. Updated some definitions  
+    2. Created definition of ctm.js(not finished)  
 
 * 0.3.14 #37 2020 Jun 21:  
-    1. Created defination of ctm.js  
+    1. Created definition of ctm.js  
     2. Updated README.md  
     3. Updated CHANGELOG.md  
 
@@ -134,13 +134,18 @@
     1. Deleted the view using this extension  
 
 * 0.3.18 #40 2020 Jun 21:  
-    1. Created full defination of CTM loaders.  
+    1. Created full definition of CTM loaders.  
 
 * 0.4.0 #41 2020 Jun 21:  
     1. Updated CHANGELOG.md  
 
 * 0.5.0 #42 2020 Jun 26:  
-    1. Created defination of SEA3D.js(1232 lines!)  
+    1. Created definition of SEA3D.js(1232 lines!)  
 
 * 0.5.1 #43 2020 Jun 26:  
     1. Updated CHANGELOG.md  
+
+* 0.5.2 #44 2020 Jun 26:  
+    1. Created definition of SEA3DDeflate.js  
+    2. Updated definition of SEA3D.js  
+    3. Updated CHANGELOG.md  

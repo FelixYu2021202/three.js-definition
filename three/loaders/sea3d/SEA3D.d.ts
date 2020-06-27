@@ -931,11 +931,11 @@ declare module SEA3D {
         }
         static DecompressionMethod: {
 
-            [id: string]: Function
+            [id: string]: (data: ArrayBuffer) => ArrayBuffer | Uint8Array;
 
         }
         static setExtension(callback: __internal.FileExtension): void;
-        static setDecompressionEngine(id: string, name: string, method: Function): void;
+        static setDecompressionEngine(id: string, name: string, method: (data: ArrayBuffer) => ArrayBuffer | Uint8Array): void;
         addClass(clazz: __internal.Constructable, unique: boolean): void;
         readHead(): boolean;
         getObject(index: number): any;
