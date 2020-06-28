@@ -149,3 +149,6 @@
     1. Created definition of SEA3DDeflate.js  
     2. Updated definition of SEA3D.js  
     3. Updated CHANGELOG.md  
+
+* 0.5.5 #45 2020 Jun 27:  
+    1. Created definition of SEA3DLZMA.js  
