@@ -141,7 +141,7 @@
     1. Updated CHANGELOG.md  
 
 * 0.5.0 #42 2020 Jun 26:  
-    1. Created definition of SEA3D.js(1232 lines!)  
+    1. Created definition of SEA3D.js  
 
 * 0.5.1 #43 2020 Jun 26:  
     1. Updated CHANGELOG.md  
@@ -158,7 +158,10 @@
 ## 2020 July
 
 * 0.6.0 #46 2020 Jul 2:  
-    1. Created defination of a file that is approximately 3900 columns long(SEA3DLoader.js)  
+    1. Created defination of SEA3DLoader.js  
     2. Updated defination of THREE.js  
     3. Updated some grammars in definations  
     4. Updated CHANGELOG.md  
+
+* 0.6.1 #47 2020 Jul 2:  
+    1. Updated CHANGELOG.md  
