@@ -646,7 +646,7 @@ declare module THREE {
         constructor(geometry: any, material: Material, mode: number);
 
         type: string;
-        geometry: BufferGeometry | Geometry
+        geometry: BufferGeometry | Geometry;
         material: LineBasicMaterial;
 
         ["constructor"]: typeof Object3D & typeof Line;
@@ -1566,6 +1566,9 @@ declare module THREE {
         InterpolantFactoryMethodLinear(result: number): LinearInterpolant;
         InterpolantFactoryMethodSmooth(result: number): CubicInterpolant;
         setInterpolation(interpolation: number): KeyframeTrack;
+        createInterpolant(result: number): DiscreteInterpolant;
+        createInterpolant(result: number): LinearInterpolant;
+        createInterpolant(result: number): CubicInterpolant;
         getInterpolation(): number;
         getValueSize(): number;
         shift(timeOffset: number): KeyframeTrack;
@@ -1659,6 +1662,7 @@ declare module THREE {
         _takeBackBinding(binding: PropertyBinding): void;
         _lendControlInterpolant(): number;
         _takeBackControlInterpolant(interpolant: number): void;
+        clipAction(clip: AnimationClip, optionalRoot: any): __internal.AnimationMixer.AnimationAction;
         existingAction(clip: AnimationClip, optionalRoot: any): any;
         stopAllAction(): AnimationMixer;
         update(deltaTime: number): AnimationMixer;
@@ -1674,7 +1678,7 @@ declare module THREE {
         constructor(name: string, duration: number, tracks: KeyframeTrack);
         
         name: string;
-        tracks: KeyframeTrack;
+        tracks: Array<KeyframeTrack>;
         duration: number;
         uuid: string;
 
@@ -5115,6 +5119,69 @@ declare module THREE {
 
                 total: number;
                 inUse: number;
+
+            }
+
+            export interface AnimationAction {
+
+                _mixer: AnimationMixer,
+                _clip: AnimationClip,
+                _localRoot: any,
+                _interpolantSettings: {
+
+                    endingStart: number,
+                    endingEnd: number
+
+                }
+                _interpolants: Array<DiscreteInterpolant | LinearInterpolant | CubicInterpolant>,
+                _propertyBindings: Array<number>,
+                _cacheIndex: number,
+                _byClipCacheIndex: number,
+                _timeScaleInterpolant: Interpolant,
+                _weightInterpolant: Interpolant,
+                loop: number,
+                _loopCount: number,
+                _startTime: number,
+                time: number,
+                timeScale: number,
+                _effectiveTimeScale: number,
+                weight: number,
+                _effectiveWeight: number,
+                repetitions: number,
+                paused: boolean,
+                enabled: boolean,
+                clampWhenFinished: boolean,
+                zeroSlopeArStart: boolean,
+                zeroSlopeAtEnd: boolean,
+                play(): AnimationAction,
+                stop(): AnimationAction,
+                reset(): AnimationAction,
+                isRunning(): boolean,
+                isScheduled(): boolean,
+                startAt(time: number): AnimationAction,
+                setLoop(mode: number, repetitions: number): AnimationAction,
+                setEffectiveWeight(weight: number): AnimationAction,
+                getEffectiveWeight(): number,
+                fadeIn(duration: number): AnimationAction,
+                fadeOut(duration: number): AnimationAction,
+                crossFadeFrom(fadeOutAction: AnimationAction, duration: number, warp: boolean): AnimationAction,
+                stopFading(): AnimationAction,
+                setEffectiveTimeScale(timeScale: number): AnimationAction,
+                getEffectiveTimeScale(): number,
+                setDuration(duration: number): AnimationAction,
+                syncWith(action: AnimationAction): AnimationAction,
+                halt(dutation: number): AnimationAction,
+                warp(startTimeScale: number, endTimeScale: number, duration: number): AnimationAction,
+                stopWarping(): AnimationAction,
+                getMixer(): AnimationMixer,
+                getClip(): AnimationClip,
+                getRoot(): any,
+                _update(time: number, deltaTime: number, timeDiretion: number, accuIndex: number): void,
+                _updateWeight(time: number): number,
+                _updateTimeScale(time: number): number,
+                _updateTime(deltaTime: number): number,
+                _setEndings(atStart: boolean, atEnd: boolean, pingPong: boolean): void,
+                _scheduleFading(duration: number, weightNow: number, weightThen: number): AnimationAction
 
             }
 

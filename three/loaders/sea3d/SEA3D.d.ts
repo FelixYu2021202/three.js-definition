@@ -138,7 +138,7 @@ declare module SEA3D {
         get deltaTime(): number;
         get elapsedTime(): number;
 
-        update(): void;
+        update: VoidFunction;
 
     }
 
@@ -949,17 +949,17 @@ declare module SEA3D {
         isDone(): boolean;
         readBody(): boolean;
         initParse(): boolean;
-        parse(): void;
-        praseObject(): void;
+        parse: VoidFunction
+        praseObject: VoidFunction
         readComplete(): boolean;
-        readState(): void;
+        readState: VoidFunction
         append(buffer: ArrayBuffer): void;
         read(buffer: ArrayBuffer): void;
         dispatchCompleteObject(obj: __internal.SEAClasses): void;
-        dispatchProgress(): void;
+        dispatchProgress: VoidFunction
         dispatchDownloadProgress(position: number, length: number): void;
-        dispatchComplete(): void;
-        dispatchError(): void;
+        dispatchComplete: VoidFunction
+        dispatchError: VoidFunction
         load(url: string): void;
 
         onParseComplete(file: {

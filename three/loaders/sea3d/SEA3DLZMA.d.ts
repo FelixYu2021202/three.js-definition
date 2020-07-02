@@ -12,8 +12,8 @@ declare module SEA3D.LZMA {
         _stream: Stream;
 
         create(windowSize: number): void;
-        flush(): void;
-        releaseStream(): void;
+        flush: VoidFunction
+        releaseStream: VoidFunction
         setStream(stream: Stream): void;
         init(solid: boolean): void;
         copyBlock(distance: number, len: number): void;
@@ -29,8 +29,8 @@ declare module SEA3D.LZMA {
         _range: number;
 
         setStream(stream: Stream): void;
-        releaseStream(): void;
-        init(): void;
+        releaseStream: VoidFunction
+        init: VoidFunction
         decodeDirectBits(numTotalBits: number): number;
         decodeBit(probs: Array<number>, index: number): number;
 
@@ -45,7 +45,7 @@ declare module SEA3D.LZMA {
         _models: Array<number>;
         _numBitLevels: number;
 
-        init(): void;
+        init: VoidFunction
         decode(rangeDecoder: RangeDecoder): number;
         reverseDecode(rangeDecoder: RangeDecoder): number;
 
@@ -62,7 +62,7 @@ declare module SEA3D.LZMA {
         _numPosStates: number;
 
         create(numPosStates: number): void;
-        init(): void;
+        init: VoidFunction
         decode(rangeDocoder: RangeDecoder, posState: number): number;
 
     }
@@ -71,7 +71,7 @@ declare module SEA3D.LZMA {
 
         _decoders: Array<number>;
 
-        init(): void;
+        init: VoidFunction
         decodeNormal(rangeDocoder: RangeDecoder): void;
         decodeWithMatchByte(rangeDecoder: RangeDecoder, matchByte: number): void;
 
@@ -85,7 +85,7 @@ declare module SEA3D.LZMA {
         _posMask: number;
 
         create(numPosBits: number, numPrevBits: number): void;
-        init(): void;
+        init: VoidFunction
         getDecoder(pos: number, prevByte: number): Decoder2;
 
     }
@@ -111,7 +111,7 @@ declare module SEA3D.LZMA {
 
         setDictionarySize(dictionarySize): boolean;
         setLcLpPb(lc: number, lp: number, pb: number): boolean;
-        init(): void;
+        init: VoidFunction
         decode(inStream: Stream, outStream: Stream, outSize: number): boolean;
         setDecoderProperties(properties: object): boolean;
 

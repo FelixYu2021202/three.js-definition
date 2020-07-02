@@ -1,6 +1,7 @@
 # Three.js-definition Change Log
 
 ## 2020 June
+
 * 0.1.1 #1 2020 Jun 5:  
     1. Uploaded the base definition of three.js  
 
@@ -152,3 +153,12 @@
 
 * 0.5.5 #45 2020 Jun 27:  
     1. Created definition of SEA3DLZMA.js  
+
+
+## 2020 July
+
+* 0.6.0 #46 2020 Jul 2:  
+    1. Created defination of a file that is approximately 3900 columns long(SEA3DLoader.js)  
+    2. Updated defination of THREE.js  
+    3. Updated some grammars in definations  
+    4. Updated CHANGELOG.md  
