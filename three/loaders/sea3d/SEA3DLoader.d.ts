@@ -144,9 +144,13 @@ declare module THREE {
         clone(config: __internal.SEA3D.Config, onParseComplete: Function, onParseProgress: Function): SEA3D.Domain;
         loadConfig(config: __internal.SEA3D.Config): void;
         parse(onParseComplete: Function, onParseProgress: Function): SEA3D.Domain;
-        onHead(args: any): void;
+        onHead(args: any): never;
 
-        static EXTENSIONS_LOADER: Array<any>;
+        static EXTENSIONS_LOADER: Array<{
+
+            setTypeRead(): void
+
+        }>;
         static EXTENSIONS_DOMAIN: Array<any>;
 
         setTypeRead(): void;

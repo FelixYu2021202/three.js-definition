@@ -158,10 +158,15 @@
 ## 2020 July
 
 * 0.6.0 #46 2020 Jul 2:  
-    1. Created defination of SEA3DLoader.js  
-    2. Updated defination of THREE.js  
-    3. Updated some grammars in definations  
+    1. Created definition of SEA3DLoader.js  
+    2. Updated definition of THREE.js  
+    3. Updated some grammars in definitions  
     4. Updated CHANGELOG.md  
 
 * 0.6.1 #47 2020 Jul 2:  
     1. Updated CHANGELOG.md  
+
+* 0.6.3 #48 2020 Jul 3:  
+    1. Created definition of SEA3DLegacy.js  
+    2. Updated definition of SEA3DLoader.js  
+    3. Updated CHANGELOG.md  
