@@ -519,7 +519,7 @@ declare module THREE {
 
         type: string;
 
-        geometry: BufferGeometry | Geometry
+        geometry: BufferGeometry | Geometry;
         material: Material;
 
         center: Vector2;

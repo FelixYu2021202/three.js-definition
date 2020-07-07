@@ -170,3 +170,7 @@
     1. Created definition of SEA3DLegacy.js  
     2. Updated definition of SEA3DLoader.js  
     3. Updated CHANGELOG.md  
+
+* 0.6.6 #49 2020 Jul 6:  
+    1. Created definition of physics/  
+    2. Updated some definitions  

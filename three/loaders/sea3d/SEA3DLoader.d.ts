@@ -28,27 +28,27 @@ declare module THREE {
         get container(): Scene;
         get elapsedTime(): number;
 
-        getMesh(name: string): SEA3D.Mesh;
-        getDummy(name: string): SEA3D.Dummy;
-        getLine(name: string): SEA3D.Line;
-        getSound3D(name: string): SEA3D.Sound;
-        getMaterial(name: string): SEA3D.Material;
-        getLight(name: string): SEA3D.Light;
-        getGLSL(name: string): SEA3D.GLSL;
-        getCamera(name: string): SEA3D.Camera;
-        getTexture(name: string): SEA3D.Texture;
-        getCubeMap(name: string): SEA3D.CubeMap;
-        getJointObject(name: string): SEA3D.JointObject;
-        getContainer3D(name: string): SEA3D.Container3D;
-        getSprite(name: string): SEA3D.Sprite;
-        getProperties(name: string): SEA3D.Properties;
+        getMesh(name: string): void;
+        getDummy(name: string): void;
+        getLine(name: string): void;
+        getSound3D(name: string): void;
+        getMaterial(name: string): void;
+        getLight(name: string): void;
+        getGLSL(name: string): void;
+        getCamera(name: string): void;
+        getTexture(name: string): void;
+        getCubeMap(name: string): void;
+        getJointObject(name: string): void;
+        getContainer3D(name: string): void;
+        getSprite(name: string): void;
+        getProperties(name: string): void;
 
         isPowerOfTwo(num: number): boolean;
         nearestPowerOfTwo(num: number): number;
         updateTransform(obj3d: Object3D, sea: any): void;
         toVector3(data: { x: number, y: number, z: number }): Vector3;
         toFaces(faces: Array<number>): Array<number>;
-        updateScene(): void;
+        updateScene: VoidFunction;
         addSceneObject(sea: any, obj3d: Object3D): void;
         createObjectURL(raw: string, mime: string): string;
         parsePath(url: string): string;
@@ -140,7 +140,7 @@ declare module THREE {
         onParseProgress(e: object): void;
         onParseComplete(e: object): void;
         onError(e: object): void;
-        createDomain(): void;
+        createDomain: VoidFunction;
         clone(config: __internal.SEA3D.Config, onParseComplete: Function, onParseProgress: Function): SEA3D.Domain;
         loadConfig(config: __internal.SEA3D.Config): void;
         parse(onParseComplete: Function, onParseProgress: Function): SEA3D.Domain;
@@ -148,12 +148,17 @@ declare module THREE {
 
         static EXTENSIONS_LOADER: Array<{
 
-            setTypeRead(): void
+            setTypeRead: VoidFunction,
+            parse: VoidFunction,
 
         }>;
-        static EXTENSIONS_DOMAIN: Array<any>;
+        static EXTENSIONS_DOMAIN: Array<{
 
-        setTypeRead(): void;
+            dispose: VoidFunction
+
+        }>;
+
+        setTypeRead: VoidFunction;
         load(data: string): void;
 
     }
@@ -201,20 +206,20 @@ declare module THREE {
             dispatchEvent: EventDispatcher["dispatchEvent"];
             dispose: VoidFunction;
 
-            getMesh(name: string): SEA3D.Mesh;
-            getDummy(name: string): SEA3D.Dummy;
-            getLine(name: string): SEA3D.Line;
-            getSound3D(name: string): SEA3D.Sound;
-            getMaterial(name: string): SEA3D.Material;
-            getLight(name: string): SEA3D.Light;
-            getGLSL(name: string): SEA3D.GLSL;
-            getCamera(name: string): SEA3D.Camera;
-            getTexture(name: string): SEA3D.Texture;
-            getCubeMap(name: string): SEA3D.CubeMap;
-            getJointObject(name: string): SEA3D.JointObject;
-            getContainer3D(name: string): SEA3D.Container3D;
-            getSprite(name: string): SEA3D.Sprite;
-            getProperties(name: string): SEA3D.Properties;
+            getMesh(name: string): void;
+            getDummy(name: string): void;
+            getLine(name: string): void;
+            getSound3D(name: string): void;
+            getMaterial(name: string): void;
+            getLight(name: string): void;
+            getGLSL(name: string): void;
+            getCamera(name: string): void;
+            getTexture(name: string): void;
+            getCubeMap(name: string): void;
+            getJointObject(name: string): void;
+            getContainer3D(name: string): void;
+            getSprite(name: string): void;
+            getProperties(name: string): void;
 
         }
 
