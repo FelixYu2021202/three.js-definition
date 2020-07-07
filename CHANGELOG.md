@@ -174,3 +174,7 @@
 * 0.6.6 #49 2020 Jul 6:  
     1. Created definition of physics/  
     2. Updated some definitions  
+
+* 0.6.9 #50 2020 Jul 6:  
+    1. Created definitions of 8 loaders  
+    2. Updated definition of three.js  

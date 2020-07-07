@@ -1012,7 +1012,7 @@ declare module THREE {
         mimeType: string;
         requestHeader: string;
 
-        load(url: string, onLoad: (file: any) => any, onProgress: (url: string, itemsLoaded: number, itemsTotal: number) => any, onError: (error: Error) => any): XMLHttpRequest;
+        load: __internal.Loader.Loader2<any, XMLHttpRequest>;
         setPath(value: string): FileLoader;
         setResponseType(value: string): FileLoader;
         setWithCredentials(value: boolean): FileLoader;
@@ -5080,7 +5080,8 @@ declare module THREE {
             type _onLoad<T> =  (data: T) => any;
             type _onProgress =  (url: string, itemsLoaded: number, itemsTotal: number) => any;
             type _onError =  (error: Error) => any;
-            export type loader<T> =  (url: string, onLoad: _onLoad<T>, onProgress: _onProgress, onError: _onError) => T;
+            export type loader<T> = Loader2<T, T>;
+            export type Loader2<T, R = void> = (url: string, onLoad: _onLoad<T>, onProgress: _onProgress, onError: _onError) => R;
 
         }
 
