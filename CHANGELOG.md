@@ -178,3 +178,6 @@
 * 0.6.9 #50 2020 Jul 6:  
     1. Created definitions of 8 loaders  
     2. Updated definition of three.js  
+
+* 0.6.10 #51 2020 Jul 7:  
+    1. Created definition of ColladaLoader.js  
