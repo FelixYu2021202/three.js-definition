@@ -179,5 +179,9 @@
     1. Created definitions of 8 loaders  
     2. Updated definition of three.js  
 
-* 0.6.10 #51 2020 Jul 7:  
+* 0.6.10 #51 2020 Jul 8:  
     1. Created definition of ColladaLoader.js  
+
+* 0.6.11 #52 2020 Jul 9:  
+    1. Created definitions of 2 loaders  
+    2. Created definition of EquiangularToCubeGenerator.js  
