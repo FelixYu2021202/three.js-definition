@@ -185,3 +185,7 @@
 * 0.6.11 #52 2020 Jul 9:  
     1. Created definitions of 2 loaders  
     2. Created definition of EquiangularToCubeGenerator.js  
+
+* 0.6.13 #53 2020 Jul 20:  
+    1. Created definitions of 5 loaders  
+    2. Fixed bug in THREE.MeshStandardMaterial  

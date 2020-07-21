@@ -4043,7 +4043,7 @@ declare module THREE {
 
     }
 
-    export class MeshStandardMaterial {
+    export class MeshStandardMaterial extends Material {
 
         constructor(parameters: __internal.Material.StandardParameter & {
 
