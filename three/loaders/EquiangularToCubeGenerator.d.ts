@@ -23,7 +23,7 @@ declare module THREE {
 
         update(renderer: WebGLRenderer): Texture;
         getShader(): ShaderMaterial;
-        dispose(): void;
+        dispose: VoidFunction;
 
     }
 

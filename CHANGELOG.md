@@ -193,3 +193,6 @@
 * 0.6.14 #54 2020 Jul 21:  
     1. Created definitions of 2 loaders  
     2. Created definition of LoaderSupport.js(not finished)  
+
+* 0.6.15 #55 2020 Jul 27:  
+    1. Created definition of LoaderSupport.js  

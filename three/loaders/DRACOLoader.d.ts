@@ -51,7 +51,7 @@ declare module THREE {
 
         static setDecoderPath(path: string): void;
         static setDecoderConfig(config: object): void;
-        static releaseDecoderModule(): void;
+        static releaseDecoderModule: VoidFunction;
         static getDecoderModule(): Promise<{
 
             decoder: any

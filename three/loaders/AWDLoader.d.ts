@@ -66,7 +66,7 @@ declare module THREE {
             get(key: string, fallback: any): any
 
         }
-        parseUserAttributes(): void;
+        parseUserAttributes: VoidFunction;
         parseAttrValue(type: number, len: number): number;
         readU8(): number;
         readI8(): number;
