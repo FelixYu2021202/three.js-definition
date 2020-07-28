@@ -196,3 +196,4 @@
 
 * 0.6.15 #55 2020 Jul 27:  
     1. Created definition of LoaderSupport.js  
+    2. Change all "defination" into "definition" (spell error...)  
