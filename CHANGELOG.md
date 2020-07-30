@@ -196,4 +196,8 @@
 
 * 0.6.15 #55 2020 Jul 27:  
     1. Created definition of LoaderSupport.js  
-    2. Change all "defination" into "definition" (spell error...)  
+
+* 0.6.16 #56 2020 Jul 30:  
+    1. Created definition of MD2Loader.js  
+    2. Updated definition of three.js  
+    3. Updated CHANGELOG.md  

@@ -3914,7 +3914,7 @@ declare module THREE {
 
     export class ShadowMaterial extends Material {
 
-        constructor(parameters: { color: Color });
+        constructor(parameters: ShadowMaterial);
 
         type: string;
         color: Color;
@@ -3929,15 +3929,7 @@ declare module THREE {
 
     export class SpriteMaterial extends Material {
 
-        constructor(parameters: {
-
-            color: number,
-            opacity: number,
-            map: Texture,
-            uvOffset: Vector2,
-            uvScale: Vector2
-
-        });
+        constructor(parameters: SpriteMaterial);
 
         type: string;
         color: Color;
@@ -3955,7 +3947,7 @@ declare module THREE {
 
     export class RawShaderMaterial extends ShaderMaterial {
 
-        constructor(parameters: __internal.Material.ShaderParameter);
+        constructor(parameters: ShaderMaterial);
 
         type: string;
 
@@ -3966,7 +3958,7 @@ declare module THREE {
 
     export class ShaderMaterial extends Material {
 
-        constructor(parameters: __internal.Shader.MaterialParameter);
+        constructor(parameters: ShaderMaterial);
 
         type: string;
         defines: { [name: string]: string };
@@ -3999,7 +3991,7 @@ declare module THREE {
 
         }
 
-        index0AttributeName: string;
+        indexAttributeName: string;
         uniformsNeedUpdate: boolean;
 
         ["constructor"]: typeof Material & typeof ShaderMaterial;
@@ -4012,7 +4004,7 @@ declare module THREE {
 
     export class PointsMaterial extends Material {
 
-        constructor(parameters: __internal.Material.PointParameter);
+        constructor(parameters: PointsMaterial);
 
         type: string;
         color: Color;
@@ -4028,7 +4020,7 @@ declare module THREE {
 
     export class MeshPhysicalMaterial extends MeshStandardMaterial {
 
-        constructor(parameters: { reflectivity: number });
+        constructor(parameters: MeshPhysicalMaterial);
 
         defines: { [name: string]: string };
         type: string;
@@ -4045,15 +4037,7 @@ declare module THREE {
 
     export class MeshStandardMaterial extends Material {
 
-        constructor(parameters: __internal.Material.StandardParameter & {
-
-            roughness: number,
-            metalness: number,
-            roughnessMap: Texture,
-            metalnessMap: Texture,
-            refractionRatio: number,
-
-        });
+        constructor(parameters: MeshStandardMaterial);
 
         defines: { [name: string]: string };
         type: string;
@@ -4099,17 +4083,7 @@ declare module THREE {
 
     export class MeshPhongMaterial extends Material {
 
-        constructor(parameters: __internal.Material.StandardParameter & {
-
-            specular: number,
-            shininess: number,
-            opacity: number,
-            specularMap: Texture,
-            conbine: number,
-            refractionRatio: number,
-            skinning: boolean
-
-        });
+        constructor(parameters: MeshPhongMaterial);
 
         type: string;
 
@@ -4168,19 +4142,7 @@ declare module THREE {
 
     export class MeshNormalMaterial extends Material {
 
-        constructor(parameters: __internal.Material.BasicParameter & {
-
-            bumpMap: Texture,
-            bumpScale: number,
-            nromalMap: Texture,
-            normalMapType: number,
-            normalScale: Vector2,
-            displacementMap: Texture,
-            displacementScale: number,
-            displacementBias: number,
-            morphNormals: boolean
-
-        });
+        constructor(parameters: MeshNormalMaterial);
 
         type: string;
         bumpMap: Texture;
@@ -4208,27 +4170,7 @@ declare module THREE {
 
     export class MeshLambertMaterial extends Material {
 
-        constructor(parameters: __internal.Material.BasicParameter & {
-
-            map: Texture,
-            lightMap: Texture,
-            lightMapIntensity: number,
-            aoMap: Texture,
-            aoMapIntensity: number,
-            emissive: number,
-            emissiveIntensity: number,
-            emissiveMap: Texture,
-            specularMap: Texture,
-            alphaMap: Texture,
-            envMap: CubeTexture,
-            combine: number,
-            reflectivity: number,
-            refractionRatio: number,
-            wireframe: boolean,
-            wireframeLinewidth: number,
-            morphNormals: boolean
-
-        });
+        constructor(parameters: MeshLambertMaterial);
 
         type: string;
         color: Color;
@@ -4263,18 +4205,7 @@ declare module THREE {
 
     export class MeshDepthMaterial extends Material {
 
-        constructor(parameters: {
-
-            opacity: number,
-            map: Texture,
-            alphaMap: Texture,
-            displacementMap: Texture,
-            displacementScale: number,
-            displacementBias: number,
-            wireframe: boolean,
-            wireframeLinewidth: number
-
-        });
+        constructor(parameters: MeshDepthMaterial);
 
         type: string;
         depthPacking: number;
@@ -4299,20 +4230,7 @@ declare module THREE {
 
     export class MeshDistanceMaterial extends Material {
 
-        constructor(parameters: {
-
-            referencePosition: number,
-            nearDistance: number,
-            farDistance: number,
-            skinning: boolean,
-            morphTargets: boolean,
-            map: Texture,
-            alphaMap: Texture,
-            displacementMap: Texture,
-            displacementScale: number,
-            displacementBias: number,
-
-        });
+        constructor(parameters: MeshDistanceMaterial);
 
         type: string;
         referencePosition: Vector3;
@@ -4337,23 +4255,7 @@ declare module THREE {
 
     export class MeshBasicMaterial extends Material {
 
-        constructor(parameters: __internal.Material.BasicParameter & {
-
-            map: Texture,
-            lightMap: Texture,
-            lightMapIntensity: number,
-            aoMap: Texture,
-            aoMapIntensity: number,
-            specularMap: Texture,
-            alphaMap: Texture,
-            envMap: CubeTexture,
-            combine: number,
-            reflectivity: number,
-            refractionRatio: number,
-            depthTest: boolean,
-            depthWrite: boolean
-
-        });
+        constructor(parameters: MeshBasicMaterial);
 
         type: string;
         color: Color;
@@ -4385,16 +4287,7 @@ declare module THREE {
 
     export class LineDashedMaterial extends LineBasicMaterial {
 
-        constructor(parameters: {
-
-            color: number,
-            opacity: number,
-            linewidth: number,
-            scale: number,
-            dashSize: number,
-            gapSize: number
-
-        });
+        constructor(parameters: LineDashedMaterial);
 
         type: string;
         scale: number;
@@ -4410,15 +4303,7 @@ declare module THREE {
 
     export class LineBasicMaterial extends Material {
 
-        constructor(parameters: {
-
-            color: number,
-            opacity: number,
-            linewidth: number,
-            linecap: string,
-            linejoin: string
-
-        });
+        constructor(parameters: LineBasicMaterial);
 
         type: string;
         color: Color;
@@ -5317,74 +5202,6 @@ declare module THREE {
             export interface value {
 
                 [key: string]: number | boolean | Color | Vector3 | string;
-
-            }
-
-            export interface ShaderParameter extends Shader.MaterialParameter { }
-
-            export interface BasicParameter {
-
-                wireframe: boolean,
-                wireframeLinewidth: number,
-                color: number,
-                opacity: number,
-                morphTargets: boolean,
-                skinning: boolean
-
-            }
-
-            export interface StandardParameter extends BasicParameter {
-
-                map: Texture
-                lightMap: Texture,
-                lightMapIntensity: number,
-                aoMap: Texture,
-                aoMapIntensity: number,
-                emissive: number,
-                emissiveIntensity: number,
-                emissiveMap: Texture,
-                bumpMap: Texture,
-                bumpScale: number,
-                normalMap: Texture,
-                normalMapType: number,
-                normalScale: Vector2,
-                displacementMap: Texture,
-                displacementScale: number,
-                displacementBias: number,
-                alphaMap: Texture,
-                envMap: CubeTexture,
-                reflectivity: number,
-                morphNormals: boolean
-
-            }
-
-            export interface PointParameter {
-
-                color: number,
-                opacity: number,
-                map: Texture,
-                size: number,
-                sizeAttenuation: boolean,
-                morphTargets: boolean
-    
-            }
-
-        }
-
-        export module Shader {
-
-            export interface MaterialParameter {
-
-                defines: { [name: string]: string },
-                uniforms: { [name: string]: __internal.Others.DescriptionMap<number>; },
-                fragmentShader: string,
-                vertexShader: string,
-                wireframe: boolean,
-                wireframeLineWidth: number,
-                lights: boolean,
-                skinning: boolean,
-                morphTargets: boolean,
-                morphNormals: boolean
 
             }
 
