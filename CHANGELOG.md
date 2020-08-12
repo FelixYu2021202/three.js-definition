@@ -201,3 +201,8 @@
     1. Created definition of MD2Loader.js  
     2. Updated definition of three.js  
     3. Updated CHANGELOG.md  
+
+## August
+
+* 0.6.18 #57 2020 Aug 12:  
+    1. Created definition of two loaders  
