@@ -205,4 +205,8 @@
 ## August
 
 * 0.6.18 #57 2020 Aug 12:  
-    1. Created definition of two loaders  
+    1. Created definitions of two loaders  
+
+* 0.6.19 #58 2020 Aug 17:  
+    1. Created definition of MTLLoader.js  
+    2. Updated CHANGELOG.md  
