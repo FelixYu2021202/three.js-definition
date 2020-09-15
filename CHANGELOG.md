@@ -213,3 +213,10 @@
 
 * 0.6.20 #59 2020 Aug 17:  
     1. Updated README.md  
+
+## September
+
+* 0.6.22 #60 2020 Sep 15:  
+    1. Created definition of two loaders  
+    2. Created definition of Volume.js  
+    3. Updated definition of three.js  

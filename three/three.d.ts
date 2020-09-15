@@ -4792,11 +4792,11 @@ declare module THREE {
 
     export function Particle(material: Material): Sprite;
 
-    export function PointCloudMaterial(parameters: __internal.Material.PointParameter): PointsMaterial;
+    export function PointCloudMaterial(parameters: PointsMaterial): PointsMaterial;
 
-    export function ParticleBasicMaterial(parameters: __internal.Material.PointParameter): PointsMaterial;
+    export function ParticleBasicMaterial(parameters: PointsMaterial): PointsMaterial;
 
-    export function ParticleSystemMaterial(parameters: __internal.Material.PointParameter): PointsMaterial;
+    export function ParticleSystemMaterial(parameters: PointsMaterial): PointsMaterial;
 
     export function Vertex(x: number, y: number, z: number): Vector3;
 
